@@ -1,7 +1,14 @@
 
 /* ================================THE COMEDY FACTORY ================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    --yellow: #f4c400;
+    --dark: #111;
+    --light: #fff;
+    --gray: #666;
+}
 
 * {
     margin: 0;
@@ -11,8 +18,8 @@
 }
 
 body {
-    background: #fff;
-    color: #222;
+    background: var(--light);
+    color: var(--dark);
 }
 
 /* HEADER */
@@ -20,108 +27,189 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 20px 80px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .logo img {
-    height: 60px;
+    height: 65px;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
-    color: #333;
+    color: var(--dark);
     font-weight: 500;
+    position: relative;
 }
 
-nav a:hover {
-    color: #f4c400;
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--yellow);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
-nav a.active {
-    color: #f4c400;
-    border-bottom: 2px solid #f4c400;
-    padding-bottom: 5px;
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
 /* HERO */
 .hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('../images/bg.jpg') center/cover;
+    height: 95vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    background: linear-gradient(135deg, #000000cc, #00000088),
+                url('../images/bg.jpg') center/cover;
     color: white;
 }
 
+.hero h1 {
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #ddd;
+}
+
 .btn {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: #f4c400;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: var(--yellow);
     border: none;
+    font-weight: 600;
     cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #d9ad00;
 }
 
 /* SECTION */
 .section {
-    padding: 80px 60px;
-    text-align: center;
+    padding: 100px 80px;
 }
 
+.section h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: var(--yellow);
+    display: block;
+    margin: 10px auto;
+}
+
+/* SHOW CARDS */
 .shows {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .card {
-    background: #fff;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .card-content {
-    padding: 20px;
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+}
+
+.card-content p {
+    margin-top: 8px;
+    color: var(--gray);
 }
 
 /* CALENDAR */
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    gap: 15px;
 }
 
 .day {
-    padding: 15px;
+    padding: 20px;
+    background: #fafafa;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.day:hover {
     background: #eee;
 }
 
 .highlight {
-    background: #f4c400;
+    background: var(--yellow);
     color: white;
+    font-weight: 700;
+}
+
+/* FORM */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form textarea {
+    height: 120px;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: #ccc;
+    background: var(--dark);
+    color: #aaa;
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
 footer a {
-    color: #f4c400;
-    text-decoration: none;
+    color: var(--yellow);
     margin: 0 10px;
+    text-decoration: none;
 }
