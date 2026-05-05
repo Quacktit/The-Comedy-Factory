@@ -5,9 +5,9 @@
 
 :root {
     --yellow: #f4c400;
-    --dark: #111;
-    --light: #fff;
-    --gray: #666;
+    --black: #111;
+    --white: #fff;
+    --gray: #777;
 }
 
 * {
@@ -18,60 +18,49 @@
 }
 
 body {
-    background: var(--light);
-    color: var(--dark);
+    background: var(--white);
 }
 
 /* HEADER */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
     z-index: 999;
 }
 
 .logo img {
-    height: 65px;
+    height: 60px;
 }
 
 nav a {
     margin: 0 20px;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--black);
     font-weight: 500;
-    position: relative;
 }
 
-nav a::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: var(--yellow);
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-}
-
-nav a:hover::after,
-nav a.active::after {
-    width: 100%;
+nav a.active {
+    color: var(--yellow);
 }
 
 /* HERO */
 .hero {
-    height: 95vh;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+                url('../images/bg.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #000000cc, #00000088),
-                url('../images/bg.jpg') center/cover;
+}
+
+.hero-content {
     color: white;
 }
 
@@ -83,59 +72,59 @@ nav a.active::after {
 .hero p {
     margin-top: 15px;
     font-size: 20px;
-    color: #ddd;
 }
 
 .btn {
     margin-top: 25px;
-    padding: 14px 35px;
-    background: var(--yellow);
+    padding: 14px 30px;
     border: none;
-    font-weight: 600;
+    background: var(--yellow);
     cursor: pointer;
     border-radius: 30px;
-    transition: 0.3s;
+    font-weight: 600;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    background: #d9ad00;
+.btn.small {
+    padding: 10px 20px;
+}
+
+/* FEATURE STRIP */
+.features {
+    display: flex;
+    justify-content: space-around;
+    background: var(--yellow);
+    padding: 20px;
+    font-weight: 600;
 }
 
 /* SECTION */
 .section {
     padding: 100px 80px;
+    text-align: center;
+}
+
+.section.light {
+    background: #fafafa;
 }
 
 .section h2 {
-    text-align: center;
     font-size: 40px;
-    margin-bottom: 60px;
-    position: relative;
+    margin-bottom: 50px;
 }
 
-.section h2::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background: var(--yellow);
-    display: block;
-    margin: 10px auto;
-}
-
-/* SHOW CARDS */
-.shows {
+/* CARDS */
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .card {
+    background: white;
     border-radius: 15px;
     overflow: hidden;
-    background: white;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .card:hover {
@@ -148,61 +137,24 @@ nav a.active::after {
     object-fit: cover;
 }
 
-.card-content {
-    padding: 25px;
-}
-
-.card-content h3 {
-    font-size: 20px;
-}
-
-.card-content p {
-    margin-top: 8px;
-    color: var(--gray);
-}
-
-/* CALENDAR */
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
-}
-
-.day {
+.card-body {
     padding: 20px;
-    background: #fafafa;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: 0.3s;
 }
 
-.day:hover {
-    background: #eee;
-}
-
-.highlight {
+.tag {
     background: var(--yellow);
-    color: white;
-    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
 }
 
-/* FORM */
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-form textarea {
-    height: 120px;
+.simple {
+    padding: 30px;
 }
 
 /* FOOTER */
 footer {
-    background: var(--dark);
+    background: var(--black);
     color: #aaa;
     text-align: center;
     padding: 50px;
@@ -211,5 +163,4 @@ footer {
 footer a {
     color: var(--yellow);
     margin: 0 10px;
-    text-decoration: none;
 }
