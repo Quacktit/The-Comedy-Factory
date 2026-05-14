@@ -1,0 +1,255 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════
+                                        The Comedy Factory - SHOWS
+  ════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Upcoming Shows — The Comedy Factory. Book tickets for standup, improv, musical nights and more across Gujarat and India." />
+  <title>Upcoming Shows | The Comedy Factory</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Floating Button -->
+  <a href="#shows" class="floating-btn" aria-label="Jump to Shows">🎟️ All Shows</a>
+
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="nav-logo" aria-label="The Comedy Factory Home">
+      <img src="../assets/logo.png"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+           alt="The Comedy Factory Logo" />
+      <span class="nav-logo-text-fallback" style="display:none; font-family:'Abril Fatface',serif; font-size:22px; color:#D4B200;">TCF</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="shows.html" class="active">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="../index.html#international">World Tour</a>
+      <a href="../index.html#media">Press</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="shows.html" class="nav-cta">Book Tickets</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="shows.html">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="../index.html#international">World Tour</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <a href="shows.html" class="nav-cta">🎟️ Book Tickets</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       PAGE HERO
+  ═══════════════════════════════════════ -->
+
+  <section id="home" style="min-height:52vh; padding-top:72px; padding-bottom:0;">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-spotlight"  aria-hidden="true"></div>
+    <div class="hero-noise"      aria-hidden="true"></div>
+    <div class="hero-stage-line" aria-hidden="true"></div>
+
+    <div class="hero-content" style="padding-bottom:80px;">
+      <p class="hero-eyebrow">Live Comedy</p>
+      <h1 class="hero-title">
+        Upcoming<br /><span>Shows</span>
+      </h1>
+      <p class="hero-subtitle">
+        Browse, explore, and book the funniest nights in Gujarat — and beyond.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Standup Comedy</span>
+      <span class="ticker-item">Open Mic Nights</span>
+      <span class="ticker-item">Musical Comedy</span>
+      <span class="ticker-item">Improv Shows</span>
+      <span class="ticker-item">Corporate Events</span>
+      <span class="ticker-item">Sketch Nights</span>
+      <span class="ticker-item">Standup Comedy</span>
+      <span class="ticker-item">Open Mic Nights</span>
+      <span class="ticker-item">Musical Comedy</span>
+      <span class="ticker-item">Improv Shows</span>
+      <span class="ticker-item">Corporate Events</span>
+      <span class="ticker-item">Sketch Nights</span>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       SHOWS SECTION
+  ═══════════════════════════════════════ -->
+
+  <section id="shows" style="padding:var(--section-pad); background:var(--black);">
+    <!-- Header + Calendar Nav -->
+    <div class="shows-header">
+      <div>
+        <p class="section-label light">On Stage</p>
+        <h2 class="section-title light">All <span>Shows</span></h2>
+      </div>
+
+      <div class="calendar-controls" role="group" aria-label="Calendar Navigation">
+        <button class="cal-nav-btn" onclick="window.TCF.changeMonth(-1)" aria-label="Previous Month">&#8592;</button>
+        <div class="cal-month-label" id="calMonthLabel" aria-live="polite">May 2026</div>
+        <button class="cal-nav-btn" onclick="window.TCF.changeMonth(1)"  aria-label="Next Month">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Show Cards -->
+    <div class="shows-cards-grid" id="showsCardsGrid" aria-label="Show Cards">
+      <!-- Injected by script.js -->
+    </div>
+
+    <!-- Full Calendar Grid -->
+    <div class="calendar-section" aria-label="Monthly Calendar View">
+      <div class="calendar-section-title">Monthly Calendar View</div>
+
+      <div class="cal-day-names" role="row">
+        <div class="cal-day-name">Sun</div>
+        <div class="cal-day-name">Mon</div>
+        <div class="cal-day-name">Tue</div>
+        <div class="cal-day-name">Wed</div>
+        <div class="cal-day-name">Thu</div>
+        <div class="cal-day-name">Fri</div>
+        <div class="cal-day-name">Sat</div>
+      </div>
+
+      <div class="cal-grid" id="calGrid" role="grid" aria-label="Calendar days">
+        <!-- Injected by script.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       HOW TO BOOK BANNER
+  ═══════════════════════════════════════ -->
+
+  <section style="padding:80px 5%; background:var(--yellow-pale);">
+    <div style="max-width:var(--max-w); margin:0 auto; text-align:center;">
+      <p class="section-label center fade-in">Easy Steps</p>
+      <h2 class="section-title center fade-in">How to <span>Book a Show</span></h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px; margin-top:48px;">
+        <div class="fade-in" style="text-align:center;">
+          <div style="font-size:40px; margin-bottom:16px;">🔍</div>
+          <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:8px; color:var(--black);">1. Browse Shows</h3>
+          <p style="font-size:14px; color:var(--muted); line-height:1.7;">Explore our upcoming lineup by month, city, or show type.</p>
+        </div>
+        <div class="fade-in" style="text-align:center;">
+          <div style="font-size:40px; margin-bottom:16px;">🎟️</div>
+          <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:8px; color:var(--black);">2. Pick Your Seats</h3>
+          <p style="font-size:14px; color:var(--muted); line-height:1.7;">Choose your preferred seats and show date on BookMyShow.</p>
+        </div>
+        <div class="fade-in" style="text-align:center;">
+          <div style="font-size:40px; margin-bottom:16px;">💳</div>
+          <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:8px; color:var(--black);">3. Pay Securely</h3>
+          <p style="font-size:14px; color:var(--muted); line-height:1.7;">UPI, cards, net banking — all payment options available.</p>
+        </div>
+        <div class="fade-in" style="text-align:center;">
+          <div style="font-size:40px; margin-bottom:16px;">😂</div>
+          <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:8px; color:var(--black);">4. Come &amp; Laugh</h3>
+          <p style="font-size:14px; color:var(--muted); line-height:1.7;">Show up, settle in, and prepare for the best night out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Enquiry CTA -->
+  <section style="padding:80px 5%; background:var(--black); text-align:center;">
+    <p class="section-label center light fade-in">Need a Private Show?</p>
+    <h2 class="section-title center light fade-in" style="margin-bottom:16px;">Corporate &amp; <span>Private Bookings</span></h2>
+    <p class="section-desc center light fade-in" style="margin-bottom:36px;">
+      We perform for corporate events, sangeets, bachelor parties, college fests, and private gatherings.
+      Every occasion except a funeral — and we're open to that too.
+    </p>
+    <a href="../index.html#contact" class="btn-primary fade-in">Enquire for Private Booking →</a>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo.png" class="footer-logo" onerror="this.style.display='none'" alt="The Comedy Factory" />
+        <p class="footer-tagline">Gujarat's first comedy entertainment company. Being funny is a serious business.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
+          <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
+          <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
+          <a href="#" class="social-btn dark" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Show Types</div>
+        <ul class="footer-nav-links">
+          <li><a href="shows.html">Standup Comedy</a></li>
+          <li><a href="shows.html">Improv Shows</a></li>
+          <li><a href="shows.html">Musical Nights</a></li>
+          <li><a href="shows.html">Open Mic Events</a></li>
+          <li><a href="shows.html">Corporate Shows</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Stay in the Loop</div>
+        <p class="newsletter-desc">Get show alerts and ticket discounts in your inbox.</p>
+        <form class="newsletter-form" novalidate aria-label="Newsletter Signup">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" required />
+          <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-copy">Privacy Policy</a>
+        <a href="terms.html"   class="footer-copy">Terms of Use</a>
+        <a href="../index.html#contact" class="footer-copy">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
