@@ -18,25 +18,10 @@
   /* ---- Scroll: shrink navbar ---- */
   function onScroll() {
     navbar.classList.toggle('scrolled', window.scrollY > 70);
-    highlightActiveLink();
   }
+  
 
-  /* ---- Active link based on scroll position ---- */
-  function highlightActiveLink() {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 120) {
-        current = sec.getAttribute('id');
-      }
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  }
-
+  
   /* ---- Hamburger toggle ---- */
   function toggleMobileMenu() {
     const isOpen = mobileMenu.classList.toggle('open');
