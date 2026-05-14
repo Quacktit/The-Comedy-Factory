@@ -1,43 +1,335 @@
-<!---------- The Comedy Factory ---------->
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════
+                                        The Comedy Factory - About
+  ════════════════════════════════════════════════════════════════════════════════════════════ -->
 
-<!---------- About --------->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About The Comedy Factory — Gujarat's first comedy entertainment company. Founded by Manan Desai in 2011." />
+  <title>About Us | The Comedy Factory</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😂</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
-
 <body>
 
-<header>
-    <div class="logo">
-        <img src="images/logo.png">
+  <a href="shows.html" class="floating-btn" aria-label="Book a Show">🎟️ Book a Show</a>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/logo.png"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+           alt="The Comedy Factory Logo" />
+      <span class="nav-logo-text-fallback" style="display:none; font-family:'Abril Fatface',serif; font-size:22px; color:#D4B200;">TCF</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="shows.html">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="../index.html#international">World Tour</a>
+      <a href="../index.html#media">Press</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="shows.html" class="nav-cta">Book Tickets</a>
     </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="shows.html">Shows</a>
-        <a href="about.html" class="active">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<section class="section">
-    <h2>About Us</h2>
-    <p>The Comedy Factory is a premium comedy club delivering top-tier stand-up experiences.</p>
-</section>
-
-<footer>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="shows.html">Shows</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shows.html">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="../index.html#contact">Contact</a>
     </div>
-    <p>© 2026 The Comedy Factory</p>
-</footer>
+    <a href="shows.html" class="nav-cta">🎟️ Book Tickets</a>
+  </div>
 
+  <!-- PAGE HERO -->
+  <section id="home" style="min-height:52vh; padding-top:72px; padding-bottom:0;">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-spotlight"  aria-hidden="true"></div>
+    <div class="hero-noise"      aria-hidden="true"></div>
+    <div class="hero-stage-line" aria-hidden="true"></div>
+    <div class="hero-content" style="padding-bottom:80px;">
+      <p class="hero-eyebrow">Est. 2011 · Ahmedabad, Gujarat</p>
+      <h1 class="hero-title">Our<br /><span>Story</span></h1>
+      <p class="hero-subtitle">
+        How a radio jockey's wild idea became Gujarat's greatest comedy institution.
+      </p>
+    </div>
+  </section>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Since 2011</span>
+      <span class="ticker-item">Made in Gujarat</span>
+      <span class="ticker-item">Loved Everywhere</span>
+      <span class="ticker-item">8 Countries</span>
+      <span class="ticker-item">500+ Shows</span>
+      <span class="ticker-item">50,000+ Laughs</span>
+      <span class="ticker-item">Since 2011</span>
+      <span class="ticker-item">Made in Gujarat</span>
+      <span class="ticker-item">Loved Everywhere</span>
+      <span class="ticker-item">8 Countries</span>
+      <span class="ticker-item">500+ Shows</span>
+      <span class="ticker-item">50,000+ Laughs</span>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" aria-label="About The Comedy Factory">
+    <div class="section-inner">
+      <p class="section-label fade-in">The Beginning</p>
+      <h2 class="section-title fade-in">
+        The <span>Origin</span> Story
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- Visual Column -->
+      <div class="about-visual fade-in">
+        <div class="about-quote-card">
+          <blockquote>
+            "I wanted to create something that Gujarat had never seen before.
+            Live comedy that was <span>original, honest, and unapologetically Gujarati</span>
+            — while also speaking to the world."
+            <footer style="margin-top:20px; font-style:normal; font-size:14px; color:rgba(255,255,255,0.5);">
+              — Manan Desai, Co-Founder
+            </footer>
+          </blockquote>
+          <div class="about-accent-corner" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-tiles">
+          <div class="about-tile light">
+            <div class="about-tile-number" data-counter="500" data-suffix="+">500+</div>
+            <div class="about-tile-label">Shows Performed</div>
+          </div>
+          <div class="about-tile dark">
+            <div class="about-tile-number" data-counter="8">8</div>
+            <div class="about-tile-label">Countries Toured</div>
+          </div>
+          <div class="about-tile dark">
+            <div class="about-tile-number" data-counter="15">15</div>
+            <div class="about-tile-label">Years of Laughter</div>
+          </div>
+          <div class="about-tile light">
+            <div class="about-tile-number" data-counter="50" data-suffix="K+">50K+</div>
+            <div class="about-tile-label">Audience Members</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="about-text fade-in">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Gujarat's <span>Comedy Pioneer</span></h2>
+
+        <p class="about-desc">
+          The Comedy Factory is a trailblazing entertainment venture — the first of its kind in India.
+          It was conceptualized by <strong>Manan Desai</strong>, Co-Founder & Programming Director,
+          who spent over seven years hosting prime-time shows on leading FM radio stations across Gujarat.
+        </p>
+        <p class="about-desc">
+          Driven by a hunger for live entertainment in the state, he founded The Comedy Factory in
+          <strong>2011</strong> to provide audiences with original content and humor. What started as
+          a bold experiment in a state better known for its business culture quickly became Gujarat's
+          most beloved entertainment institution.
+        </p>
+        <p class="about-desc">
+          With time, our performances took us way beyond Gujarat — including corporate affairs and public
+          shows in countries like the <strong>UK, Canada, USA, and Australia</strong>. We are proud to
+          have pioneered Urban Standup Comedy in Gujarat.
+        </p>
+        <p class="about-desc">
+          Popular comedic voices of India including Zakir Khan, Amit Tandon, Vir Das, Kanan Gill,
+          Abishek Upmanyu, and Kenny Sebastian have <strong>brought their live shows to Gujarat through us</strong>.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-pill fade-in"><span class="pill-icon">🎤</span> Standup Comedy</div>
+          <div class="feature-pill fade-in"><span class="pill-icon">🎭</span> Improv Shows</div>
+          <div class="feature-pill fade-in"><span class="pill-icon">🎵</span> Musical Nights</div>
+          <div class="feature-pill fade-in"><span class="pill-icon">🎨</span> Sketch Comedy</div>
+          <div class="feature-pill fade-in"><span class="pill-icon">📱</span> YouTube & Digital</div>
+          <div class="feature-pill fade-in"><span class="pill-icon">🏢</span> Corporate Events</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section style="padding:var(--section-pad); background:var(--black);">
+    <div style="max-width:var(--max-w); margin:0 auto;">
+      <p class="section-label light fade-in">Our Journey</p>
+      <h2 class="section-title light fade-in">15 Years in <span>Numbers</span></h2>
+
+      <div style="margin-top:56px; display:flex; flex-direction:column; gap:0; position:relative;">
+        <!-- Timeline vertical line -->
+        <div style="position:absolute; left:120px; top:0; bottom:0; width:1px; background:rgba(212,178,0,0.2);"></div>
+
+        <!-- Milestone 1 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; padding:0 0 48px; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2011</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">The Comedy Factory is Born</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              Manan Desai launches TCF in Ahmedabad, performing the first live standup comedy show
+              in Gujarat. The audience of 50 becomes the seed of a movement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; padding:0 0 48px; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2013</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">Expanding Across Gujarat</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              TCF begins performing across Surat, Vadodara, and Rajkot. Improv and Musical Comedy
+              formats are introduced. Audiences double with every show.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; padding:0 0 48px; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2015</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">Gujarati Cinema Debut</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              TCF artists make their Gujarati cinema debut. Chirayu Mistry joins the ensemble.
+              First corporate show for a Fortune 500 company in Ahmedabad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; padding:0 0 48px; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2018</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">First International Tour</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              TCF takes its first international tour to the UK and Canada. Gujarati comedy
+              lands on international stages for the very first time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; padding:0 0 48px; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2021</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">10 Years &amp; Going Strong</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              TCF celebrates its 10th anniversary with a sold-out mega show in Ahmedabad.
+              300+ shows completed. YouTube channel crosses 1 million views.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 6 -->
+        <div class="fade-in" style="display:flex; gap:40px; align-items:flex-start; position:relative;">
+          <div style="width:80px; flex-shrink:0; text-align:right;">
+            <span style="font-family:var(--font-wide); font-size:22px; color:var(--yellow); letter-spacing:1px;">2026</span>
+          </div>
+          <div style="width:20px; height:20px; background:var(--yellow); border-radius:50%; flex-shrink:0; margin-top:4px; position:relative; z-index:1;"></div>
+          <div>
+            <h3 style="font-family:var(--font-serif); font-size:20px; color:var(--white); margin-bottom:8px;">The Story Continues</h3>
+            <p style="font-size:14px; color:rgba(255,255,255,0.45); line-height:1.75;">
+              500+ shows. 8 countries. 50,000+ audience members. And this is only the beginning.
+              The Comedy Factory is poised to soar even higher.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:80px 5%; background:var(--yellow-pale); text-align:center;">
+    <p class="section-label center fade-in">Be Part of the Story</p>
+    <h2 class="section-title center fade-in">Come Laugh <span>With Us</span></h2>
+    <p class="section-desc center fade-in">Book your seats for an upcoming show and become part of TCF's 15-year legacy of laughter.</p>
+    <a href="shows.html" class="btn-primary fade-in" style="margin-top:32px; display:inline-block;">View Upcoming Shows →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo.png" class="footer-logo" onerror="this.style.display='none'" alt="The Comedy Factory" />
+        <p class="footer-tagline">Gujarat's first comedy entertainment company. Being funny is a serious business.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
+          <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
+          <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
+          <a href="#" class="social-btn dark" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Show Types</div>
+        <ul class="footer-nav-links">
+          <li><a href="shows.html">Standup Comedy</a></li>
+          <li><a href="shows.html">Improv Shows</a></li>
+          <li><a href="shows.html">Musical Nights</a></li>
+          <li><a href="shows.html">Open Mic Events</a></li>
+          <li><a href="shows.html">Corporate Shows</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Stay in the Loop</div>
+        <p class="newsletter-desc">Get show alerts and ticket discounts in your inbox.</p>
+        <form class="newsletter-form" novalidate aria-label="Newsletter Signup">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" required />
+          <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-copy">Privacy Policy</a>
+        <a href="terms.html"   class="footer-copy">Terms of Use</a>
+        <a href="../index.html#contact" class="footer-copy">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>
