@@ -1,0 +1,190 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════════════════════
+                                        The Comedy Factory - Media
+  ════════════════════════════════════════════════════════════════════════════════════════════ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery — The Comedy Factory. Photos and memories from our shows, tours, open mics, and more." />
+  <title>Gallery | The Comedy Factory</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <a href="shows.html" class="floating-btn" aria-label="Book a Show">🎟️ Book a Show</a>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/logo.png"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+           alt="The Comedy Factory Logo" />
+      <span class="nav-logo-text-fallback" style="display:none; font-family:'Abril Fatface',serif; font-size:22px; color:#D4B200;">TCF</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="shows.html">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="../index.html#international">World Tour</a>
+      <a href="../index.html#media">Press</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="shows.html" class="nav-cta">Book Tickets</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="shows.html">Shows</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <a href="shows.html" class="nav-cta">🎟️ Book Tickets</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section id="home" style="min-height:52vh; padding-top:72px; padding-bottom:0;">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-spotlight"  aria-hidden="true"></div>
+    <div class="hero-noise"      aria-hidden="true"></div>
+    <div class="hero-stage-line" aria-hidden="true"></div>
+    <div class="hero-content" style="padding-bottom:80px;">
+      <p class="hero-eyebrow">Moments &amp; Memories</p>
+      <h1 class="hero-title">Behind the<br /><span>Laughs</span></h1>
+      <p class="hero-subtitle">
+        Sold-out shows, international stages, open mics, and everything in between.
+      </p>
+    </div>
+  </section>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Live Shows</span>
+      <span class="ticker-item">Open Mic Nights</span>
+      <span class="ticker-item">Musical Evenings</span>
+      <span class="ticker-item">International Tours</span>
+      <span class="ticker-item">Corporate Events</span>
+      <span class="ticker-item">Improv Sessions</span>
+      <span class="ticker-item">Live Shows</span>
+      <span class="ticker-item">Open Mic Nights</span>
+      <span class="ticker-item">Musical Evenings</span>
+      <span class="ticker-item">International Tours</span>
+      <span class="ticker-item">Corporate Events</span>
+      <span class="ticker-item">Improv Sessions</span>
+    </div>
+  </div>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" style="padding:var(--section-pad); background:var(--gray); overflow:hidden;">
+    <div class="gallery-intro">
+      <p class="section-label fade-in">Our Archive</p>
+      <h2 class="section-title fade-in">TCF <span>Gallery</span></h2>
+      <p class="section-desc fade-in">
+        Filter by category to explore our shows, tours, open mics, corporate events,
+        and international adventures.
+      </p>
+
+      <!-- Filter Buttons — filled by JS -->
+      <div class="gallery-filters" id="galleryFilters" role="tablist" aria-label="Gallery Filters">
+        <!-- Injected by script.js -->
+      </div>
+    </div>
+
+    <!-- Masonry Grid — filled by JS -->
+    <div class="gallery-masonry" id="galleryGrid" aria-label="Photo Gallery">
+      <!-- Injected by script.js -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-label="Image Viewer" aria-modal="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-emoji" aria-hidden="true">🎤</div>
+      <div class="lightbox-title">Gallery Item</div>
+    </div>
+  </div>
+
+  <!-- SHARE CALLOUT -->
+  <section style="padding:72px 5%; background:var(--black); text-align:center;">
+    <p class="section-label center light fade-in">Social Media</p>
+    <h2 class="section-title center light fade-in">
+      Tag Us in Your <span>TCF Moments</span>
+    </h2>
+    <p class="section-desc center light fade-in">
+      Been to one of our shows? Share your photos and tag
+      <strong style="color:var(--yellow);">@thecomedyfactoryindia</strong> — your shot might
+      end up right here in our gallery!
+    </p>
+    <div style="display:flex; gap:14px; justify-content:center; margin-top:36px; flex-wrap:wrap;">
+      <a href="#" class="btn-primary fade-in">Instagram →</a>
+      <a href="#" class="btn-outline fade-in">YouTube →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo.png" class="footer-logo" onerror="this.style.display='none'" alt="The Comedy Factory" />
+        <p class="footer-tagline">Gujarat's first comedy entertainment company. Being funny is a serious business.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
+          <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
+          <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
+          <a href="#" class="social-btn dark" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Show Types</div>
+        <ul class="footer-nav-links">
+          <li><a href="shows.html">Standup Comedy</a></li>
+          <li><a href="shows.html">Improv Shows</a></li>
+          <li><a href="shows.html">Musical Nights</a></li>
+          <li><a href="shows.html">Open Mic Events</a></li>
+          <li><a href="shows.html">Corporate Shows</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Stay in the Loop</div>
+        <p class="newsletter-desc">Get show alerts and ticket discounts in your inbox.</p>
+        <form class="newsletter-form" novalidate aria-label="Newsletter Signup">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" required />
+          <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-copy">Privacy Policy</a>
+        <a href="terms.html"   class="footer-copy">Terms of Use</a>
+        <a href="../index.html#contact" class="footer-copy">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
