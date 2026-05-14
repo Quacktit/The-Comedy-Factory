@@ -224,33 +224,50 @@ ul { list-style: none; }
 
 /* ---- FLOATING BOOK BUTTON ---- */
 .floating-btn {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 999;
-  background: var(--yellow);
-  color: var(--black);
-  padding: 14px 28px;
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  box-shadow: var(--shadow-yellow);
-  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-  animation: floatPulse 2.5s ease-in-out infinite;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background var(--ease), color var(--ease);
+ 
+  display: none; 
 }
-.floating-btn:hover {
-  background: var(--black);
-  color: var(--yellow);
+
+
+@media (max-width: 768px) {
+  .floating-btn {
+    display: flex;
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 999;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 14px 22px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-yellow);
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    align-items: center;
+    gap: 8px;
+    
+    
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+  }
+
+
+  .floating-btn.show-on-scroll {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .floating-btn:hover {
+    background: var(--black);
+    color: var(--yellow);
+  }
 }
-@keyframes floatPulse {
-  0%, 100% { box-shadow: 0 8px 30px rgba(212,178,0,0.4); }
-  50%       { box-shadow: 0 14px 44px rgba(212,178,0,0.75); }
-}
+
 
 /* ================================================= 
                      NAVBAR
