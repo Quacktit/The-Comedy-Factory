@@ -2,8 +2,7 @@
 
 
 /* ============================================================
-                          NAVBAR
-   Handles: scroll shrink, hamburger menu, active link highlight
+                          NAVBAR & BUTTONS
    ============================================================ */
 
 (function () {
@@ -12,21 +11,28 @@
   const navbar      = document.getElementById('navbar');
   const hamburger   = document.querySelector('.hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
-  const navLinks    = document.querySelectorAll('.nav-links a');
-  const sections    = document.querySelectorAll('section[id]');
+  const floatingBtn = document.querySelector('.floating-btn'); 
 
-  /* ---- Scroll: shrink navbar ---- */
+  /* ---- Scroll: shrink navbar & reveal mobile button ---- */
   function onScroll() {
+   
     navbar.classList.toggle('scrolled', window.scrollY > 70);
+    
+  
+    if (floatingBtn) {
+      if (window.scrollY > 300) {
+        floatingBtn.classList.add('show-on-scroll');
+      } else {
+        floatingBtn.classList.remove('show-on-scroll');
+      }
+    }
   }
-  
 
-  
   /* ---- Hamburger toggle ---- */
   function toggleMobileMenu() {
     const isOpen = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
-    // Prevent body scroll when menu is open
+    
     document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
@@ -63,7 +69,6 @@
 
 /* ============================================================
                            SHOWS-DATA
-   Central data store for all upcoming shows
    ============================================================ */
 
 window.TCF = window.TCF || {};
@@ -233,7 +238,6 @@ window.TCF.showsData = [
 
 /* ============================================================
                            SHOWS
-   Renders show cards and the interactive calendar grid
    ============================================================ */
 
 (function () {
@@ -381,7 +385,6 @@ window.TCF.showsData = [
 
 /* ============================================================
                            GALLERY
-   Renders gallery masonry grid, filter tabs, and lightbox
    ============================================================ */
 
 (function () {
@@ -510,7 +513,6 @@ window.TCF.showsData = [
 
 /* ============================================================
                            CONTACT
-   Handles: form validation, submission, success state
    ============================================================ */
 
 (function () {
@@ -627,7 +629,6 @@ window.TCF.showsData = [
 
 /* ===============================================================================================================
                                                           ANIMATIONS
-   Handles: scroll-triggered fade-ins, hero counter animation,parallax effects, smooth reveal orchestration
    =============================================================================================================== */
 
 (function () {
@@ -744,7 +745,6 @@ window.TCF.showsData = [
 
 /* ==========================================================================
                                NEWSLETTER
-   Handles footer newsletter signup with validation
    ========================================================================== */
 
 (function () {
