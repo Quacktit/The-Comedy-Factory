@@ -36,3 +36,6 @@ I am highly motivated to collaborate with the team and am actively open to discu
 If you have any feedback or would like to connect:
 GitHub: [@quacktit](https://github.com/quacktit)
 Email: (vankarvivaksh@gmail.com}
+
+© 2026 Vivaksh Vankar. All rights reserved. 
+This project was created strictly as a design concept pitch and may not be used, reproduced, or distributed for commercial purposes without explicit permission.
