@@ -203,7 +203,7 @@ ul { list-style: none; }
 }
 .social-btn.dark {
   border-color: rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.7);
 }
 .social-btn.dark:hover {
   border-color: var(--yellow);
@@ -2127,20 +2127,5 @@ footer#site-footer {
   section { padding: 40px 0; }
 }
 
-/*----------- Socials ------------*/
-.social-links {
-  display: flex;
-  gap: 16px; /* Adjust spacing between icons */
-  align-items: center;
-}
-
-/* Optional: Add a subtle hover effect */
-.social-links svg {
-  transition: opacity 0.2s ease;
-}
-
-.social-links svg:hover {
-  opacity: 0.7;
-}
 
 
