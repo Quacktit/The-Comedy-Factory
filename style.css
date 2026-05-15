@@ -2297,3 +2297,141 @@ footer#site-footer {
   position: relative; /* Creates a layer */
   z-index: 999; /* Forces the entire filter above show cards */
 }
+
+
+/* =======================================================
+   INTERNATIONAL SHOWS (HORIZONTAL BANNERS SECTION)
+======================================================= */
+
+/* 1. Grid set wider to accommodate landscape banners */
+.intl-shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 36px;
+}
+
+/* 2. Card Container */
+.intl-poster-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--ease);
+}
+
+.intl-poster-card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(212, 178, 0, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* 3. Tag sitting on top of the image */
+.intl-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* 4. Locks the image area to a standard 2:1 Horizontal Ratio */
+.intl-poster-img-wrap {
+  aspect-ratio: 2 / 1; 
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 5. Temporary placeholder if you don't have an image uploaded yet */
+.intl-poster-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1a1a1a 0%, #080808 100%);
+}
+.intl-poster-placeholder span {
+  font-size: 54px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.8));
+}
+.intl-poster-placeholder p {
+  font-family: var(--font-wide);
+  font-size: 28px;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.05);
+  margin: 0;
+}
+
+/* 6. Real Banner Image styling */
+.intl-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the banner fills the box beautifully */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.intl-poster-card:hover .intl-poster-img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* 7. Card Information Below the Banner */
+.intl-poster-info {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.intl-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.intl-dates {
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.intl-cities {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* 8. Stretch the booking button across the whole card */
+.intl-btn {
+  margin-top: auto;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 13px;
+}
+
+/* 9. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .intl-shows-grid {
+    grid-template-columns: 1fr; /* Switch to a single column on mobile screens */
+  }
+}
