@@ -47,12 +47,12 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   hamburger.addEventListener('click', toggleMobileMenu);
 
-  // Close on any nav link inside mobile menu
+
   document.querySelectorAll('#mobileMenu a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close on outside click
+
   document.addEventListener('click', function (e) {
     if (
       mobileMenu.classList.contains('open') &&
@@ -63,7 +63,7 @@
     }
   });
 
-  // Initial call
+
   onScroll();
 })();
 
@@ -79,7 +79,7 @@ window.TCF.showsData = [
     day: 10,
     month: 'May',
     year: 2026,
-    monthNum: 4,          // JS month index (0 = Jan)
+    monthNum: 4,       
     time: '7:30 PM',
     name: 'Open Mic Madness',
     artist: 'Multiple Artists',
@@ -329,7 +329,7 @@ window.TCF.showsData = [
 
     let html = '';
 
-    // Leading empty cells
+
     for (let i = 0; i < firstDay; i++) {
       html += '<div class="cal-cell empty"></div>';
     }
@@ -367,7 +367,7 @@ window.TCF.showsData = [
     renderShowCards();
     renderCalendar();
 
-    // Re-trigger fade-ins for new cards
+  
     if (window.TCF && window.TCF.observeFadeIns) {
       window.TCF.observeFadeIns();
     }
@@ -384,7 +384,7 @@ window.TCF.showsData = [
 })();
 
 /* ============================================================
-                           GALLERY
+                           GALLERY/MEDIA
    ============================================================ */
 
 (function () {
@@ -464,7 +464,7 @@ window.TCF.showsData = [
       </div>
     `).join('');
 
-    // Attach lightbox handlers
+    
     grid.querySelectorAll('.gallery-item').forEach((el, i) => {
       el.addEventListener('click', () => openLightbox(filtered[i]));
     });
@@ -503,7 +503,7 @@ window.TCF.showsData = [
       if (e.target === overlay) closeLightbox();
     });
 
-    // Keyboard close
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeLightbox();
     });
@@ -530,10 +530,10 @@ window.TCF.showsData = [
     const field = document.getElementById(fieldId);
     if (!field) return;
     field.style.borderColor = '#e53935';
-    // Remove old error label if any
+
     const existing = field.parentElement.querySelector('.field-error');
     if (existing) existing.remove();
-    // Insert new one
+   
     const err = document.createElement('span');
     err.className = 'field-error';
     err.style.cssText = 'display:block; font-size:11px; color:#e53935; margin-top:5px; letter-spacing:0.5px;';
@@ -593,14 +593,14 @@ window.TCF.showsData = [
       btn.disabled    = true;
     }
 
-    // Simulate async send (replace with real fetch to backend/email service)
+  
     setTimeout(function () {
       const form    = document.getElementById('contactFormEl');
       const success = document.getElementById('contactSuccess');
       if (form)    form.style.display    = 'none';
       if (success) success.classList.add('show');
 
-      // Reset after a while (optional)
+     
       setTimeout(function () {
         if (form)    { form.reset(); form.style.display = ''; }
         if (success) success.classList.remove('show');
@@ -640,7 +640,7 @@ window.TCF.showsData = [
   const fadeObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry, i) {
       if (entry.isIntersecting) {
-        // Stagger siblings slightly
+     
         const siblings = entry.target.parentElement
           ? Array.from(entry.target.parentElement.querySelectorAll('.fade-in:not(.visible)'))
           : [];
@@ -659,7 +659,7 @@ window.TCF.showsData = [
     });
   }
 
-  // Expose so other modules can call after dynamic renders
+
   window.TCF.observeFadeIns = observeFadeIns;
 
   /* ---- Counter animation for hero stats ---- */
@@ -672,7 +672,7 @@ window.TCF.showsData = [
     function step(now) {
       const elapsed  = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
+  
       const eased    = 1 - Math.pow(1 - progress, 3);
       const current  = target * eased;
       el.textContent = prefix + (isInt ? Math.round(current) : current.toFixed(0)) + suffix;
@@ -803,33 +803,33 @@ window.TCF.showsData = [
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Find all our custom dropdowns
+  
     const selects = document.querySelectorAll('.shows-dropdown, .newsletter-city');
     
     selects.forEach(select => {
-      // 1. Create a wrapper
+   
       const wrapper = document.createElement('div');
       wrapper.className = 'custom-select-wrapper';
       
-      // 2. Wrap the original select
+
       select.parentNode.insertBefore(wrapper, select);
       wrapper.appendChild(select);
       
-      // 3. Create the visible button (trigger)
+   
       const trigger = document.createElement('div');
       trigger.className = 'custom-select-trigger';
-      // Set initial text to the currently selected option
+ 
       trigger.textContent = select.options[select.selectedIndex].text;
       wrapper.appendChild(trigger);
       
-      // 4. Create the pop-up list
+    
       const optionsList = document.createElement('ul');
       optionsList.className = 'custom-select-options';
       wrapper.appendChild(optionsList);
       
-      // 5. Populate the pop-up list with our options
+    
       Array.from(select.options).forEach(option => {
-        // Skip disabled placeholder options (like "City") from the pop-up menu
+   
         if (option.disabled) return; 
         
         const li = document.createElement('li');
@@ -839,42 +839,40 @@ window.TCF.showsData = [
         
         if (option.selected) li.classList.add('selected');
         
-        // When an option is clicked...
+     
         li.addEventListener('click', function(e) {
           e.stopPropagation();
           
-          // Update the original hidden select
+   
           select.value = this.dataset.value;
-          // Update the visible button text
+      
           trigger.textContent = this.textContent;
           
-          // Trigger the "change" event so our filtering script knows it updated
+  
           select.dispatchEvent(new Event('change'));
           
-          // Update the highlighted class
+         
           wrapper.querySelectorAll('.custom-option').forEach(el => el.classList.remove('selected'));
           this.classList.add('selected');
           
-          // Close the dropdown
           wrapper.classList.remove('open');
         });
         
         optionsList.appendChild(li);
       });
       
-      // 6. Open/Close the dropdown when clicking the button
       trigger.addEventListener('click', function(e) {
         e.stopPropagation();
-        // Close any other open dropdowns first
+       
         document.querySelectorAll('.custom-select-wrapper').forEach(w => {
           if (w !== wrapper) w.classList.remove('open');
         });
-        // Toggle this one
+     
         wrapper.classList.toggle('open');
       });
     });
     
-    // 7. Close the dropdown if the user clicks anywhere else on the page
+
     document.addEventListener('click', function() {
       document.querySelectorAll('.custom-select-wrapper').forEach(w => {
         w.classList.remove('open');
