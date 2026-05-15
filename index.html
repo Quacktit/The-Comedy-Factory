@@ -1,118 +1,200 @@
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════════
-                                    The Comedy Factory — HOME
- ═══════════════════════════════════════════════════════════════════════════════════════════ -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Comedy Factory — Gujarat's First &amp; Finest Comedy Entertainment Company. Standup, Improv, Musical Comedy &amp; More." />
-  <meta name="keywords" content="The Comedy Factory, Standup Comedy, Gujarat, Ahmedabad, Open Mic, Manan Desai, Comedy Shows" />
-  <meta property="og:title" content="The Comedy Factory | Laugh Off" />
-  <meta property="og:description" content="Gujarat's first comedy entertainment company. We are in the funny business, and being funny is a serious business." />
-  <title>The Comedy Factory</title>
-
-  <link rel="icon" type="image/png" href="assets/tcflogo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;800&family=Abril+Fatface&display=swap" rel="stylesheet" />
+  <meta name="description" content="The Comedy Factory — Gujarat's First Comedy Entertainment Company. Standup · Improv · Musical · Sketch." />
+  <meta property="og:title" content="The Comedy Factory | Gujarat's Comedy Pioneer" />
+  <title>The Comedy Factory | Laugh Off</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════
-       FLOATING BOOK BUTTON
-  ════════════════════════════════ -->
+  <!-- ══════════════════════ FLOATING CTA ══════════════════════ -->
   <a href="pages/shows.html" class="floating-btn" aria-label="Book a Show">🎟️ Book Now</a>
 
-  <!-- ═══════════════════════════════
-       NAVBAR
-  ════════════════════════════════ -->
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
   <nav id="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="index.html" class="nav-logo" aria-label="The Comedy Factory Home">
-      <img src="assets/tcflogo.png" alt="The Comedy Factory Logo" />
+    <a href="index.html" class="nav-logo" aria-label="Home">
+      <img src="assets/logo.png"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+           alt="The Comedy Factory" />
+      <span class="nav-logo-fallback">TCF</span>
     </a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="pages/about.html">About</a>
       <a href="pages/shows.html">Shows</a>
       <a href="pages/team.html">Team</a>
-      <a href="pages/media.html">Press</a>
+      <a href="pages/gallery.html">Gallery</a>
+      <a href="index.html#international">World Tour</a>
+      <a href="index.html#media">Press</a>
       <a href="pages/contact.html">Contact</a>
       <a href="pages/shows.html" class="nav-cta">Book Tickets</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="pages/about.html">About</a>
       <a href="pages/shows.html">Shows</a>
       <a href="pages/team.html">Team</a>
-      <a href="pages/media.html">Press</a>
+      <a href="pages/gallery.html">Gallery</a>
+      <a href="index.html#international">World Tour</a>
       <a href="pages/contact.html">Contact</a>
     </div>
     <a href="pages/shows.html" class="nav-cta">🎟️ Book Tickets</a>
   </div>
 
-  <!-- ═══════════════════════════════
-       HERO SECTION
-  ════════════════════════════════ -->
-  <section id="home" aria-label="Hero">
-    <div class="hero-bg-pattern"  aria-hidden="true"></div>
-    <div class="hero-spotlight"   aria-hidden="true"></div>
-    <div class="hero-noise"       aria-hidden="true"></div>
-    <div class="hero-stage-line"  aria-hidden="true"></div>
 
-    <div class="hero-content">
-      <img src="assets/tcflogo.png" class="hero-logo" alt="The Comedy Factory" />
-      <p class="hero-eyebrow">Gujarat's First Comedy Entertainment Company</p>
-      <h1 class="hero-title">
-        We're in the<br />
-        <span>Funny Business</span>
-      </h1>
-      <p class="hero-subtitle">Standup · Improv · Musical · Sketch · Open Mic — Since 2011</p>
-      <div class="hero-btns">
-        <a href="pages/shows.html" class="btn-primary">🎟️ Book a Show</a>
-        <a href="#about"           class="btn-outline">Our Story →</a>
+  <!-- ══════════════════════════════════════════════════════════
+       HERO — SPLIT SCREEN
+       Left: giant rotating word + headline + actions + stats
+       Right: live show tiles stacked vertically
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="home" class="hero-split" aria-label="Hero">
+
+    <!-- LEFT PANEL -->
+    <div class="hero-left">
+      <div class="hero-left-inner">
+
+        <div class="hero-eyebrow fade-in">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Gujarat's First Comedy Co. &nbsp;·&nbsp; Est. 2011
+        </div>
+
+        <div class="hero-big-word-wrap" aria-hidden="true">
+          <span class="hero-big-word" id="heroRotatingWord">LAUGH</span>
+        </div>
+
+        <h1 class="hero-headline fade-in">
+          We're in the<br /><em>Funny</em> Business.
+        </h1>
+
+        <p class="hero-sub fade-in">Standup · Improv · Musical · Sketch · Open Mic</p>
+
+        <div class="hero-actions fade-in">
+          <a href="pages/shows.html" class="btn-primary">🎟 Book a Show</a>
+          <a href="pages/about.html" class="hero-ghost-link">Our Story →</a>
+        </div>
+
+        <div class="hero-mini-stats fade-in" aria-label="Key numbers">
+          <div class="mini-stat">
+            <span class="mini-stat-num" data-counter="500" data-suffix="+">500+</span>
+            <span class="mini-stat-label">Shows</span>
+          </div>
+          <div class="mini-stat-divider" aria-hidden="true"></div>
+          <div class="mini-stat">
+            <span class="mini-stat-num" data-counter="8">8</span>
+            <span class="mini-stat-label">Countries</span>
+          </div>
+          <div class="mini-stat-divider" aria-hidden="true"></div>
+          <div class="mini-stat">
+            <span class="mini-stat-num" data-counter="15">15</span>
+            <span class="mini-stat-label">Years</span>
+          </div>
+          <div class="mini-stat-divider" aria-hidden="true"></div>
+          <div class="mini-stat">
+            <span class="mini-stat-num" data-counter="50" data-suffix="K+">50K+</span>
+            <span class="mini-stat-label">Laughs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-vert-text" aria-hidden="true">THE COMEDY FACTORY · SINCE 2011</div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="hero-right" aria-label="Upcoming shows preview">
+      <div class="hero-right-header">
+        <span class="hero-right-label">Next Up on Stage</span>
+        <a href="pages/shows.html" class="hero-right-viewall">All shows →</a>
+      </div>
+
+      <article class="show-tile fade-in" aria-label="Open Mic Madness, May 10">
+        <div class="show-tile-date">
+          <span class="tile-day">10</span>
+          <span class="tile-month">May</span>
+        </div>
+        <div class="show-tile-info">
+          <span class="tile-badge green">This Weekend</span>
+          <h3 class="tile-name">Open Mic Madness</h3>
+          <p class="tile-venue">📍 Comedy Den, Ahmedabad</p>
+        </div>
+        <div class="show-tile-cta">
+          <span class="tile-price">₹299</span>
+          <a href="pages/shows.html" class="btn-book">Book</a>
+        </div>
+      </article>
+
+      <article class="show-tile fade-in" aria-label="Standup Saturday, May 17">
+        <div class="show-tile-date">
+          <span class="tile-day">17</span>
+          <span class="tile-month">May</span>
+        </div>
+        <div class="show-tile-info">
+          <span class="tile-badge red">Selling Fast</span>
+          <h3 class="tile-name">Standup Saturday</h3>
+          <p class="tile-venue">📍 Laughter House, Surat</p>
+        </div>
+        <div class="show-tile-cta">
+          <span class="tile-price">₹499</span>
+          <a href="pages/shows.html" class="btn-book">Book</a>
+        </div>
+      </article>
+
+      <article class="show-tile fade-in" aria-label="TCF Musical Night, May 24">
+        <div class="show-tile-date">
+          <span class="tile-day">24</span>
+          <span class="tile-month">May</span>
+        </div>
+        <div class="show-tile-info">
+          <span class="tile-badge">New Show</span>
+          <h3 class="tile-name">TCF Musical Night</h3>
+          <p class="tile-venue">📍 Nazaakat Hall, Vadodara</p>
+        </div>
+        <div class="show-tile-cta">
+          <span class="tile-price">₹599</span>
+          <a href="pages/shows.html" class="btn-book">Book</a>
+        </div>
+      </article>
+
+      <article class="show-tile fade-in" aria-label="Improv Unplugged, May 31">
+        <div class="show-tile-date">
+          <span class="tile-day">31</span>
+          <span class="tile-month">May</span>
+        </div>
+        <div class="show-tile-info">
+          <span class="tile-badge red">Limited Seats</span>
+          <h3 class="tile-name">Improv Unplugged</h3>
+          <p class="tile-venue">📍 Rangmanch Studio, Rajkot</p>
+        </div>
+        <div class="show-tile-cta">
+          <span class="tile-price">₹349</span>
+          <a href="pages/shows.html" class="btn-book">Book</a>
+        </div>
+      </article>
+
+      <div class="hero-right-footer">
+        <div class="scroll-hint" aria-hidden="true">Scroll to explore</div>
       </div>
     </div>
 
-    <div class="hero-stats" aria-label="Key statistics">
-      <div class="hero-stat">
-        <div class="hero-stat-number" data-counter="500" data-suffix="+">500+</div>
-        <div class="hero-stat-label">Shows Performed</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number" data-counter="8">8</div>
-        <div class="hero-stat-label">Countries Toured</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number" data-counter="15" data-suffix="Yrs">15Yrs</div>
-        <div class="hero-stat-label">Of Laughter</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number" data-counter="50000" data-suffix="+">50K+</div>
-        <div class="hero-stat-label">Happy Audience</div>
-      </div>
-    </div>
-
-    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    <div class="hero-diagonal" aria-hidden="true"></div>
   </section>
 
-  <!-- ═══════════════════════════════
-       TICKER BANNER
-  ════════════════════════════════ -->
+
+  <!-- ══════════════════════ TICKER ══════════════════════ -->
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker-inner">
       <span class="ticker-item">Standup Comedy</span>
-      <span class="ticker-item">Improv Shows</span>
+      <span class="ticker-item">Improv Theatre</span>
       <span class="ticker-item">Musical Nights</span>
       <span class="ticker-item">Open Mic Events</span>
       <span class="ticker-item">Corporate Shows</span>
@@ -120,7 +202,7 @@
       <span class="ticker-item">International Tours</span>
       <span class="ticker-item">Private Events</span>
       <span class="ticker-item">Standup Comedy</span>
-      <span class="ticker-item">Improv Shows</span>
+      <span class="ticker-item">Improv Theatre</span>
       <span class="ticker-item">Musical Nights</span>
       <span class="ticker-item">Open Mic Events</span>
       <span class="ticker-item">Corporate Shows</span>
@@ -130,327 +212,259 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════════
-       ABOUT SECTION
-  ════════════════════════════════ -->
-  <section id="about" aria-label="About The Comedy Factory">
-    <div class="section-inner">
-      <p class="section-label fade-in">Who We Are</p>
-      <h2 class="section-title fade-in">
-        The Pioneers of<br /><span>Live Comedy in Gujarat</span>
-      </h2>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ACTS GRID — 4 punchy format cards
+  ═════════════════════════════════════════════════════════════= -->
+  <section class="acts-section" aria-label="Comedy Formats">
+    <div class="acts-header">
+      <p class="section-label fade-in">What We Do</p>
+      <h2 class="section-title fade-in">Pick Your <span>Poison</span></h2>
     </div>
+    <div class="acts-grid">
+      <a href="pages/shows.html" class="act-card act-standup fade-in" aria-label="Standup Comedy">
+        <div class="act-card-icon" aria-hidden="true">🎤</div>
+        <div class="act-card-body">
+          <h3 class="act-card-title">Standup</h3>
+          <p class="act-card-desc">Raw, unfiltered, and real. One mic, one voice, unlimited laughs.</p>
+        </div>
+        <div class="act-card-arrow" aria-hidden="true">→</div>
+        <div class="act-card-bg-text" aria-hidden="true">HA</div>
+      </a>
+      <a href="pages/shows.html" class="act-card act-improv fade-in" aria-label="Improv Comedy">
+        <div class="act-card-icon" aria-hidden="true">🎭</div>
+        <div class="act-card-body">
+          <h3 class="act-card-title">Improv</h3>
+          <p class="act-card-desc">No scripts. No safety net. Pure chaos driven by YOU — the audience.</p>
+        </div>
+        <div class="act-card-arrow" aria-hidden="true">→</div>
+        <div class="act-card-bg-text" aria-hidden="true">OH</div>
+      </a>
+      <a href="pages/shows.html" class="act-card act-musical fade-in" aria-label="Musical Comedy">
+        <div class="act-card-icon" aria-hidden="true">🎵</div>
+        <div class="act-card-body">
+          <h3 class="act-card-title">Musical</h3>
+          <p class="act-card-desc">Songs you love, jokes you didn't know you needed. Comedy meets melody.</p>
+        </div>
+        <div class="act-card-arrow" aria-hidden="true">→</div>
+        <div class="act-card-bg-text" aria-hidden="true">LA</div>
+      </a>
+      <a href="pages/shows.html" class="act-card act-corporate fade-in" aria-label="Corporate Shows">
+        <div class="act-card-icon" aria-hidden="true">🏢</div>
+        <div class="act-card-body">
+          <h3 class="act-card-title">Corporate</h3>
+          <p class="act-card-desc">Clean, sharp, tailored. We make your office events actually enjoyable.</p>
+        </div>
+        <div class="act-card-arrow" aria-hidden="true">→</div>
+        <div class="act-card-bg-text" aria-hidden="true">YO</div>
+      </a>
+    </div>
+  </section>
 
-    <div class="about-grid">
-      <!-- Visual Column -->
-      <div class="about-visual fade-in">
-        <div class="about-quote-card">
-          <blockquote>
-            "Laughter is our business — and we take it
-            <span>very seriously.</span> One show at a time,
-            one city at a time, one punchline at a time."
-          </blockquote>
-          <div class="about-accent-corner" aria-hidden="true"></div>
-        </div>
-        <div class="about-tiles">
-          <div class="about-tile light">
-            <div class="about-tile-number" data-counter="500" data-suffix="+">500+</div>
-            <div class="about-tile-label">Shows</div>
-          </div>
-          <div class="about-tile dark">
-            <div class="about-tile-number" data-counter="8">8</div>
-            <div class="about-tile-label">Countries</div>
-          </div>
-          <div class="about-tile dark">
-            <div class="about-tile-number" data-counter="15">15</div>
-            <div class="about-tile-label">Years Running</div>
-          </div>
-          <div class="about-tile light">
-            <div class="about-tile-number" data-counter="50" data-suffix="K+">50K+</div>
-            <div class="about-tile-label">Fans Laughed</div>
-          </div>
-        </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT — FULL-BLEED QUOTE WALL + FACT STRIP
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="about" class="about-strip" aria-label="About us">
+    <div class="about-strip-quote">
+      <blockquote class="about-big-quote fade-in">
+        "Laughter is our business — and being funny is a
+        <em>very serious business.</em>"
+      </blockquote>
+      <cite class="about-cite fade-in">— Manan Desai, Co-Founder &amp; Programming Director</cite>
+      <a href="pages/about.html" class="btn-outline fade-in">Read Our Full Story</a>
+    </div>
+    <div class="about-strip-facts">
+      <div class="fact-row fade-in">
+        <span class="fact-num" data-counter="500" data-suffix="+">500+</span>
+        <span class="fact-label">Live shows across India and the world</span>
       </div>
-
-      <!-- Text Column -->
-      <div class="about-text fade-in">
-        <p class="section-label">Our Story</p>
-        <h2 class="section-title">Since <span>2011</span></h2>
-        <p class="about-desc">
-          The Comedy Factory is a trailblazing entertainment venture — the first of its kind in India.
-          Conceptualized by <strong>Manan Desai</strong>, Co-Founder &amp; Programming Director, who spent
-          seven years hosting prime-time shows on FM radio stations across Gujarat.
-        </p>
-        <p class="about-desc">
-          Driven by a hunger for live entertainment in the state, Manan founded TCF to deliver original
-          content and real humor to audiences who deserved better. Today, we have taken our performances
-          way beyond Gujarat — to the <strong>UK, Canada, USA, Australia, and beyond</strong>.
-        </p>
-        <p class="about-desc">
-          We pioneered Urban Standup Comedy in Gujarat and have since expanded into Improv, Musical,
-          and Sketch Comedy. Popular names like Zakir Khan, Vir Das, Kenny Sebastian, and Kanan Gill
-          have brought their shows to Gujarat <strong>through us</strong>.
-        </p>
-        <div class="about-features">
-          <div class="feature-pill fade-in"><span class="pill-icon">🎤</span> Standup Comedy</div>
-          <div class="feature-pill fade-in"><span class="pill-icon">🎭</span> Improv Shows</div>
-          <div class="feature-pill fade-in"><span class="pill-icon">🎵</span> Musical Comedy</div>
-          <div class="feature-pill fade-in"><span class="pill-icon">🎨</span> Sketch Comedy</div>
-          <div class="feature-pill fade-in"><span class="pill-icon">🎬</span> YouTube &amp; Digital</div>
-          <div class="feature-pill fade-in"><span class="pill-icon">🏢</span> Corporate Events</div>
-        </div>
-        <a href="pages/about.html" class="btn-primary about-readmore">Read Full Story →</a>
+      <div class="fact-divider" aria-hidden="true"></div>
+      <div class="fact-row fade-in">
+        <span class="fact-num" data-counter="8">8</span>
+        <span class="fact-label">Countries — UK, USA, Canada, Australia &amp; more</span>
+      </div>
+      <div class="fact-divider" aria-hidden="true"></div>
+      <div class="fact-row fade-in">
+        <span class="fact-num" data-counter="15">15</span>
+        <span class="fact-label">Years of making Gujarat laugh out loud</span>
+      </div>
+      <div class="fact-divider" aria-hidden="true"></div>
+      <div class="fact-row fade-in">
+        <span class="fact-num" data-counter="50" data-suffix="K+">50K+</span>
+        <span class="fact-label">Happy audience members and counting</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       SHOWS & CALENDAR SECTION
-  ════════════════════════════════ -->
-  <section id="shows" aria-label="Upcoming Shows">
-    <div class="shows-header">
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHOWS — Calendar-anchored
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="shows" class="shows-section-home" aria-label="Upcoming Shows">
+    <div class="shows-home-header">
       <div>
-        <p class="section-label light">On Stage</p>
-        <h2 class="section-title light">Upcoming <span>Shows</span></h2>
+        <p class="section-label light fade-in">On Stage Now</p>
+        <h2 class="section-title light fade-in">Upcoming <span>Shows</span></h2>
       </div>
-      <div class="calendar-controls" role="group" aria-label="Calendar Navigation">
+      <div class="calendar-controls" role="group" aria-label="Month Navigation">
         <button class="cal-nav-btn" onclick="window.TCF.changeMonth(-1)" aria-label="Previous Month">&#8592;</button>
         <div class="cal-month-label" id="calMonthLabel" aria-live="polite">May 2026</div>
-        <button class="cal-nav-btn" onclick="window.TCF.changeMonth(1)"  aria-label="Next Month">&#8594;</button>
+        <button class="cal-nav-btn" onclick="window.TCF.changeMonth(1)" aria-label="Next Month">&#8594;</button>
       </div>
     </div>
-
-    <!-- Show Cards (filled by script.js) -->
     <div class="shows-cards-grid" id="showsCardsGrid" aria-label="Show Cards"></div>
-
-    <!-- Calendar Grid -->
     <div class="calendar-section" aria-label="Monthly Calendar">
-      <div class="calendar-section-title">Monthly Calendar View</div>
+      <div class="calendar-section-title">Calendar View</div>
       <div class="cal-day-names" role="row">
-        <div class="cal-day-name">Sun</div>
-        <div class="cal-day-name">Mon</div>
-        <div class="cal-day-name">Tue</div>
-        <div class="cal-day-name">Wed</div>
-        <div class="cal-day-name">Thu</div>
-        <div class="cal-day-name">Fri</div>
+        <div class="cal-day-name">Sun</div><div class="cal-day-name">Mon</div>
+        <div class="cal-day-name">Tue</div><div class="cal-day-name">Wed</div>
+        <div class="cal-day-name">Thu</div><div class="cal-day-name">Fri</div>
         <div class="cal-day-name">Sat</div>
       </div>
       <div class="cal-grid" id="calGrid" role="grid" aria-label="Calendar days"></div>
     </div>
-
-    <div class="section-cta-center">
-      <a href="pages/shows.html" class="btn-primary">View All Shows &amp; Book Tickets →</a>
+    <div class="shows-home-cta">
+      <a href="pages/shows.html" class="btn-primary">View All Shows &amp; Book →</a>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       TEAM SECTION
-  ════════════════════════════════ -->
-  <section id="team" aria-label="Our Team">
-    <div class="team-intro">
-      <p class="section-label fade-in">The People Behind the Laughs</p>
-      <h2 class="section-title fade-in">Meet the <span>Comedy Factory</span> Team</h2>
-      <p class="section-desc fade-in">
-        A diverse group of artists, writers, performers, and creators — united by one mission: to make India laugh.
-      </p>
-    </div>
 
-    <div class="team-grid">
-      <article class="team-card fade-in" aria-label="Manan Desai">
+  <!-- ══════════════════════════════════════════════════════════
+       TEAM — Horizontal scroll strip
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="team" class="team-strip-section" aria-label="Our Team">
+    <div class="team-strip-header">
+      <div>
+        <p class="section-label fade-in">The People</p>
+        <h2 class="section-title fade-in">Behind the <span>Laughs</span></h2>
+      </div>
+      <a href="pages/team.html" class="btn-primary fade-in">Full Team →</a>
+    </div>
+    <div class="team-scroll-track" role="list" aria-label="Team Members">
+      <article class="team-scroll-card fade-in" role="listitem" aria-label="Manan Desai">
         <div class="team-card-top">
-          <div class="team-avatar" aria-hidden="true">MD</div>
+          <div class="team-avatar">MD</div>
           <div class="team-shows-badge">Founder</div>
         </div>
         <div class="team-card-body">
           <h3 class="team-name">Manan Desai</h3>
-          <div class="team-role">Co-Founder &amp; Programmer</div>
-          <p class="team-bio">
-            Radio Jockey turned comedy visionary. Manan founded TCF in 2011 and has
-            since produced 500+ shows across India and 8 countries. The man who turned
-            laughter into Gujarat's biggest export.
-          </p>
+          <div class="team-role">Co-Founder &amp; Director</div>
+          <p class="team-bio">Radio Jockey turned comedy visionary. Founded TCF in 2011. Performed in 8+ countries.</p>
           <div class="team-socials">
-            <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn" aria-label="Instagram">Ig</a>
-            <a href="https://www.youtube.com/@TheComedyFactory"         target="_blank" class="social-btn" aria-label="YouTube">Yt</a>
+            <a href="#" class="social-btn" aria-label="Instagram">Ig</a>
+            <a href="#" class="social-btn" aria-label="YouTube">Yt</a>
           </div>
         </div>
       </article>
-
-      <article class="team-card fade-in" aria-label="Chirayu Mistry">
+      <article class="team-scroll-card fade-in" role="listitem" aria-label="Chirayu Mistry">
         <div class="team-card-top">
-          <div class="team-avatar" aria-hidden="true">CM</div>
+          <div class="team-avatar">CM</div>
           <div class="team-shows-badge">260+ Shows</div>
         </div>
         <div class="team-card-body">
           <h3 class="team-name">Chirayu Mistry</h3>
           <div class="team-role">Comedian &amp; Writer</div>
-          <p class="team-bio">
-            Engineer by degree, comedian by calling. His deadpan style and stoic
-            expressions are iconic. Has performed in Australia, USA, UAE, Canada,
-            and Africa. Written for Sprite, appeared in Gujarati cinema.
-          </p>
+          <p class="team-bio">Deadpan king. Engineer by degree, comedian by destiny. 6 countries and counting.</p>
           <div class="team-socials">
-            <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn" aria-label="Instagram">Ig</a>
-            <a href="https://www.youtube.com/@TheComedyFactory"         target="_blank" class="social-btn" aria-label="YouTube">Yt</a>
+            <a href="#" class="social-btn" aria-label="Instagram">Ig</a>
+            <a href="#" class="social-btn" aria-label="YouTube">Yt</a>
           </div>
         </div>
       </article>
-
-      <article class="team-card fade-in" aria-label="Deep Vaidya">
+      <article class="team-scroll-card fade-in" role="listitem" aria-label="Deep Vaidya">
         <div class="team-card-top">
-          <div class="team-avatar" aria-hidden="true">DV</div>
-          <div class="team-shows-badge">Production Head</div>
+          <div class="team-avatar">DV</div>
+          <div class="team-shows-badge">Production</div>
         </div>
         <div class="team-card-body">
           <h3 class="team-name">Deep Vaidya</h3>
           <div class="team-role">Actor &amp; Production Head</div>
-          <p class="team-bio">
-            Masters in HR, but his heart belongs to the stage. Deep brings his
-            theatre background to every production, ensuring TCF's shows are
-            technically flawless and artistically bold.
-          </p>
+          <p class="team-bio">Masters in HR, heart on the stage. The engine behind every flawless TCF show.</p>
           <div class="team-socials">
-            <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn" aria-label="Instagram">Ig</a>
-            <a href="https://www.youtube.com/@TheComedyFactory"         target="_blank" class="social-btn" aria-label="YouTube">Yt</a>
+            <a href="#" class="social-btn" aria-label="Instagram">Ig</a>
           </div>
         </div>
       </article>
-
-      <article class="team-card fade-in" aria-label="Om Bhatt">
+      <article class="team-scroll-card fade-in" role="listitem" aria-label="Om Bhatt">
         <div class="team-card-top">
-          <div class="team-avatar" aria-hidden="true">OB</div>
+          <div class="team-avatar">OB</div>
           <div class="team-shows-badge">Rising Star</div>
         </div>
         <div class="team-card-body">
           <h3 class="team-name">Om Bhatt</h3>
           <div class="team-role">Comedian &amp; Improv Artist</div>
-          <p class="team-bio">
-            The freshest voice on the TCF stage. Om's Gujarati standup has found
-            a huge audience online and on stage. His "Public Prayog" series is
-            a fan favorite across Gujarat.
-          </p>
+          <p class="team-bio">Freshest voice on the TCF stage. "Public Prayog" — Gujarat's favourite series.</p>
           <div class="team-socials">
-            <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn" aria-label="Instagram">Ig</a>
-            <a href="https://www.youtube.com/@TheComedyFactory"         target="_blank" class="social-btn" aria-label="YouTube">Yt</a>
+            <a href="#" class="social-btn" aria-label="Instagram">Ig</a>
+            <a href="#" class="social-btn" aria-label="YouTube">Yt</a>
           </div>
         </div>
       </article>
-    </div>
-
-    <div class="section-cta-center">
-      <a href="pages/team.html" class="btn-primary">Meet the Full Team →</a>
+      <a href="pages/team.html" class="team-scroll-more" aria-label="See full team">
+        <span class="team-more-text">Meet the<br />Full Team</span>
+        <span class="team-more-arrow">→</span>
+      </a>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       GALLERY SECTION
-  ════════════════════════════════ -->
-  <section id="gallery" aria-label="Photo Gallery">
-    <div class="gallery-intro">
-      <p class="section-label fade-in">Moments &amp; Memories</p>
-      <h2 class="section-title fade-in">Behind the <span>Laughs</span></h2>
-      <p class="section-desc fade-in">
-        From sold-out shows in Ahmedabad to international stages in London and Toronto —
-        every frame tells a story.
-      </p>
-      <!-- Filter Buttons (filled by script.js) -->
-      <div class="gallery-filters" id="galleryFilters" role="tablist" aria-label="Gallery Filters"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       GALLERY PEEK — Mosaic asymmetric
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="gallery" class="gallery-peek-section" aria-label="Gallery teaser">
+    <div class="gallery-peek-header">
+      <div>
+        <p class="section-label fade-in">Captured Moments</p>
+        <h2 class="section-title fade-in">Sold-Out Rooms &amp;<br /><span>Louder Nights</span></h2>
+        <p class="section-desc fade-in">From Ahmedabad stages to London theatres.</p>
+        <a href="pages/gallery.html" class="btn-primary fade-in">Full Gallery →</a>
+      </div>
     </div>
-
-    <!-- Masonry Grid (filled by script.js) -->
-    <div class="gallery-masonry" id="galleryGrid" aria-label="Gallery Grid"></div>
-
-    <div class="section-cta-center">
-      <a href="pages/media.html" class="btn-primary">View Full Gallery →</a>
+    <div class="gallery-peek-mosaic" aria-label="Gallery mosaic preview">
+      <div class="peek-tile peek-tall fade-in">
+        <div class="peek-placeholder">
+          <span class="peek-emoji" aria-hidden="true">🎤</span>
+          <span class="peek-caption">Live Show</span>
+        </div>
+      </div>
+      <div class="peek-tile fade-in">
+        <div class="peek-placeholder">
+          <span class="peek-emoji" aria-hidden="true">😂</span>
+          <span class="peek-caption">Open Mic</span>
+        </div>
+      </div>
+      <div class="peek-tile fade-in">
+        <div class="peek-placeholder">
+          <span class="peek-emoji" aria-hidden="true">🌍</span>
+          <span class="peek-caption">UK Tour</span>
+        </div>
+      </div>
+      <div class="peek-tile peek-wide fade-in">
+        <div class="peek-placeholder">
+          <span class="peek-emoji" aria-hidden="true">🎵</span>
+          <span class="peek-caption">Musical Night</span>
+        </div>
+      </div>
+      <div class="peek-tile fade-in">
+        <div class="peek-placeholder">
+          <span class="peek-emoji" aria-hidden="true">👏</span>
+          <span class="peek-caption">Sold Out</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-label="Image Viewer" aria-modal="true">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
-      <div class="lightbox-emoji" aria-hidden="true">🎤</div>
-      <div class="lightbox-title">Gallery Item</div>
-    </div>
-  </div>
 
-  <!-- ═══════════════════════════════
-       TESTIMONIALS SECTION
-  ════════════════════════════════ -->
-  <section id="testimonials" aria-label="Audience Testimonials">
-    <div class="testimonials-header">
-      <p class="section-label center light">Audience Loves Us</p>
-      <h2 class="section-title center light">The Crowd <span>Speaks</span></h2>
-      <p class="section-desc center light">
-        Don't take our word for it — hear from the thousands who've laughed with us.
-      </p>
-    </div>
-
-    <div class="testimonials-grid">
-      <article class="testimonial-card fade-in" aria-label="Testimonial from Priya Shah">
-        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
-        <blockquote class="testimonial-text">
-          "TCF's Standup Saturday was the best evening I've had in years. Manan and Chirayu
-          had the entire hall in tears — of laughter! Absolutely world-class."
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="author-avatar">PS</div>
-          <div>
-            <div class="author-name">Priya Shah</div>
-            <div class="author-title">Marketing Director, Ahmedabad</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card fade-in" aria-label="Testimonial from Rohan Mehta">
-        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
-        <blockquote class="testimonial-text">
-          "We booked TCF for our company's annual event and they absolutely nailed it.
-          Clean, sharp, perfectly tailored humor. Every single person in the room was
-          doubled over laughing!"
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="author-avatar">RM</div>
-          <div>
-            <div class="author-name">Rohan Mehta</div>
-            <div class="author-title">VP Operations, Surat</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card fade-in" aria-label="Testimonial from Kavya Patel">
-        <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
-        <blockquote class="testimonial-text">
-          "The Musical Night was absolutely mind-blowing. Comedy + music — who knew that was
-          a combination we needed in our lives? TCF continues to push boundaries!"
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="author-avatar">KP</div>
-          <div>
-            <div class="author-name">Kavya Patel</div>
-            <div class="author-title">Event Blogger, Vadodara</div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════
-       INTERNATIONAL SECTION
-  ════════════════════════════════ -->
+  <!-- ══════════════════════════════════════════════════════════
+       INTERNATIONAL
+  ═════════════════════════════════════════════════════════════= -->
   <section id="international" aria-label="International Shows">
-    <div class="international-intro">
+    <div class="section-inner">
       <p class="section-label fade-in">We've Gone Global</p>
       <h2 class="section-title fade-in">TCF Around <span>the World</span></h2>
-      <p class="section-desc fade-in">
-        From the streets of Ahmedabad to stages in London, Toronto, Sydney, and New York —
-        Gujarat's comedy has gone international.
-      </p>
+      <p class="section-desc fade-in">From Ahmedabad to London, Toronto, Sydney, and New York.</p>
     </div>
-
     <div class="countries-grid">
       <div class="country-card fade-in"><span class="country-flag">🇬🇧</span><div class="country-name">United Kingdom</div><div class="country-shows">12+ Shows</div></div>
       <div class="country-card fade-in"><span class="country-flag">🇨🇦</span><div class="country-name">Canada</div><div class="country-shows">8+ Shows</div></div>
@@ -461,8 +475,7 @@
       <div class="country-card fade-in"><span class="country-flag">🇸🇬</span><div class="country-name">Singapore</div><div class="country-shows">5+ Shows</div></div>
       <div class="country-card fade-in"><span class="country-flag">🇳🇿</span><div class="country-name">New Zealand</div><div class="country-shows">3+ Shows</div></div>
     </div>
-
-    <div class="international-strip" aria-hidden="true">
+    <div class="international-strip">
       <span class="strip-label">Also Performed For</span>
       <div class="strip-names">
         <span class="strip-name">Zakir Khan</span>
@@ -475,19 +488,57 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       MEDIA / PRESS SECTION
-  ════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       TESTIMONIALS
+  ═════════════════════════════════════════════════════════════= -->
+  <section id="testimonials" aria-label="Testimonials">
+    <div class="testimonials-header">
+      <p class="section-label center light fade-in">Crowd Approved</p>
+      <h2 class="section-title center light fade-in">The Audience <span>Speaks</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="t-quote">"TCF's Standup Saturday was the best evening I've had in years. Manan and Chirayu had the entire hall in tears — of laughter. Absolutely world-class."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">PS</div>
+          <div><div class="author-name">Priya Shah</div><div class="author-title">Marketing Director, Ahmedabad</div></div>
+        </div>
+      </article>
+      <article class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="t-quote">"We booked TCF for our company's annual event and they nailed it. Every single person doubled over laughing!"</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">RM</div>
+          <div><div class="author-name">Rohan Mehta</div><div class="author-title">VP Operations, Surat</div></div>
+        </div>
+      </article>
+      <article class="testimonial-card fade-in">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote-mark" aria-hidden="true">"</div>
+        <blockquote class="t-quote">"The Musical Night was mind-blowing. Comedy + music — who knew that was what we needed? TCF continues to push boundaries."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">KP</div>
+          <div><div class="author-name">Kavya Patel</div><div class="author-title">Event Blogger, Vadodara</div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       PRESS
+  ═════════════════════════════════════════════════════════════= -->
   <section id="media" aria-label="Media Coverage">
     <div class="media-intro">
       <p class="section-label fade-in">In the News</p>
       <h2 class="section-title fade-in">Media <span>Coverage</span></h2>
-      <p class="section-desc fade-in">
-        The Comedy Factory has been featured across leading national and regional media outlets.
-      </p>
+      <p class="section-desc fade-in">Featured across India's leading media outlets.</p>
     </div>
-
-    <div class="press-logos" aria-label="Press mentions">
+    <div class="press-logos">
       <div class="press-logo-item">Times of India</div>
       <div class="press-logo-item">Divya Bhaskar</div>
       <div class="press-logo-item">Gujarat Samachar</div>
@@ -495,182 +546,59 @@
       <div class="press-logo-item">Mid-Day</div>
       <div class="press-logo-item">Scroll.in</div>
     </div>
-
     <div class="media-grid">
-      <article class="media-card fade-in" aria-label="Times of India Feature">
-        <div class="media-thumb">
-          <div class="media-thumb-bg"></div>
-          <button class="media-play-btn" aria-label="Play Video">▶</button>
-          <div class="media-outlet-tag">Times of India</div>
-        </div>
-        <div class="media-card-body">
-          <div class="media-type-tag">Feature Story</div>
-          <h3 class="media-title">How The Comedy Factory Made Gujarat Laugh — And the World Take Notice</h3>
-          <div class="media-source">📰 Times of India · March 2025</div>
-        </div>
+      <article class="media-card fade-in">
+        <div class="media-thumb"><div class="media-thumb-bg"></div><button class="media-play-btn" aria-label="Play">▶</button><div class="media-outlet-tag">Times of India</div></div>
+        <div class="media-card-body"><div class="media-type-tag">Feature Story</div><h3 class="media-title">How The Comedy Factory Made Gujarat Laugh — And the World Take Notice</h3><div class="media-source">📰 Times of India · March 2025</div></div>
       </article>
-
-      <article class="media-card fade-in" aria-label="Scroll.in Interview">
-        <div class="media-thumb">
-          <div class="media-thumb-bg"></div>
-          <button class="media-play-btn" aria-label="Play Video">▶</button>
-          <div class="media-outlet-tag">Scroll.in</div>
-        </div>
-        <div class="media-card-body">
-          <div class="media-type-tag">Interview</div>
-          <h3 class="media-title">Manan Desai on Pioneering Stand-up Comedy in a State Where Alcohol is Banned</h3>
-          <div class="media-source">📰 Scroll.in · January 2025</div>
-        </div>
+      <article class="media-card fade-in">
+        <div class="media-thumb"><div class="media-thumb-bg"></div><button class="media-play-btn" aria-label="Play">▶</button><div class="media-outlet-tag">Scroll.in</div></div>
+        <div class="media-card-body"><div class="media-type-tag">Interview</div><h3 class="media-title">Manan Desai on Pioneering Stand-up Comedy in a State Where Alcohol is Banned</h3><div class="media-source">📰 Scroll.in · January 2025</div></div>
       </article>
-
-      <article class="media-card fade-in" aria-label="Divya Bhaskar Profile">
-        <div class="media-thumb">
-          <div class="media-thumb-bg"></div>
-          <button class="media-play-btn" aria-label="Play Video">▶</button>
-          <div class="media-outlet-tag">Divya Bhaskar</div>
-        </div>
-        <div class="media-card-body">
-          <div class="media-type-tag">Profile</div>
-          <h3 class="media-title">ગુજરાતની હાસ્ય ક્રાંતિ: ધ કૉમેડી ફૅક્ટ્રી ૧૫ વર્ષ</h3>
-          <div class="media-source">📰 Divya Bhaskar · November 2024</div>
-        </div>
+      <article class="media-card fade-in">
+        <div class="media-thumb"><div class="media-thumb-bg"></div><button class="media-play-btn" aria-label="Play">▶</button><div class="media-outlet-tag">Divya Bhaskar</div></div>
+        <div class="media-card-body"><div class="media-type-tag">Profile</div><h3 class="media-title">ગુજરાતની હાસ્ય ક્રાંતિ: ધ કૉમેડી ફૅક્ટ્રી ૧૫ વર્ષ</h3><div class="media-source">📰 Divya Bhaskar · November 2024</div></div>
       </article>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       CONTACT SECTION
-  ════════════════════════════════ -->
-  <section id="contact" aria-label="Contact Us">
-    <div class="contact-inner">
-      <p class="section-label light fade-in">Get in Touch</p>
-      <h2 class="section-title light fade-in">Book a Show or <span>Say Hello</span></h2>
 
-      <div class="contact-grid">
-
-        <!-- Info Column -->
-        <div class="contact-info fade-in">
-          <div class="contact-item">
-            <div class="contact-icon-box" aria-hidden="true">📍</div>
-            <div>
-              <div class="contact-info-label">Our Base</div>
-              <div class="contact-info-value">Ahmedabad &amp; Vadodara, Gujarat, India</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box" aria-hidden="true">📞</div>
-            <div>
-              <div class="contact-info-label">Call Us</div>
-              <div class="contact-info-value">+91 98765 43210</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box" aria-hidden="true">✉️</div>
-            <div>
-              <div class="contact-info-label">Email</div>
-              <div class="contact-info-value">hello@thecomedyfactory.in</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon-box" aria-hidden="true">🎤</div>
-            <div>
-              <div class="contact-info-label">Bookings</div>
-              <div class="contact-info-value">bookings@thecomedyfactory.in</div>
-            </div>
-          </div>
-          <div class="contact-socials-title">Follow the Factory</div>
-          <div class="contact-socials">
-            <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn dark" aria-label="Instagram">Ig</a>
-            <a href="https://www.youtube.com/@TheComedyFactory"         target="_blank" class="social-btn dark" aria-label="YouTube">Yt</a>
-            <a href="https://www.facebook.com/thecomedyfactory/"        target="_blank" class="social-btn dark" aria-label="Facebook">Fb</a>
-            <a href="https://x.com/ComedyFactoryIn"                     target="_blank" class="social-btn dark" aria-label="Twitter/X">X</a>
-          </div>
-        </div>
-
-        <!-- Form Column -->
-        <div class="contact-form fade-in">
-          <h3 class="form-title">Send Us an Enquiry</h3>
-          <p class="form-subtitle">Corporate bookings, private events, press inquiries — we're all ears.</p>
-
-          <div class="form-success" id="contactSuccess" role="alert" aria-live="polite">
-            <div class="success-icon">🎉</div>
-            <p>
-              <strong>Message received!</strong><br />
-              Our team will get back to you within 24 hours. Check out our
-              <a href="pages/shows.html">upcoming shows</a> in the meantime.
-            </p>
-          </div>
-
-          <form id="contactFormEl" novalidate aria-label="Contact Form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contactName">Full Name</label>
-                <input type="text"  id="contactName"  name="name"  placeholder="Your full name"    autocomplete="name"  required />
-              </div>
-              <div class="form-group">
-                <label for="contactPhone">Phone Number</label>
-                <input type="tel"   id="contactPhone" name="phone" placeholder="+91 98765 43210"   autocomplete="tel"   required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="contactEmail">Email Address</label>
-              <input type="email" id="contactEmail" name="email" placeholder="your@email.com" autocomplete="email" required />
-            </div>
-            <div class="form-group">
-              <label for="contactType">Enquiry Type</label>
-              <select id="contactType" name="type">
-                <option value="">Select an option…</option>
-                <option value="corporate">Corporate Show Booking</option>
-                <option value="private">Private Event</option>
-                <option value="press">Press / Media</option>
-                <option value="collaboration">Artist Collaboration</option>
-                <option value="general">General Enquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="contactMessage">Message</label>
-              <textarea id="contactMessage" name="message" placeholder="Tell us about your event, expected guests, date, venue…" required></textarea>
-            </div>
-            <button type="submit" id="contactSubmitBtn" class="btn-submit">Send Enquiry →</button>
-          </form>
-        </div>
-
+  <!-- ══════════════════════════════════════════════════════════
+       HOME CONTACT CTA STRIP
+  ═════════════════════════════════════════════════════════════= -->
+  <section class="home-contact-cta" aria-label="Contact CTA">
+    <div class="home-cta-inner">
+      <div class="home-cta-text">
+        <p class="section-label light fade-in">Let's Talk</p>
+        <h2 class="section-title light fade-in">Book a Show or <span>Say Hello</span></h2>
+        <p class="section-desc light fade-in">Corporate bookings, private events, press inquiries, or just a fan saying hi — our door is always open.</p>
       </div>
-
-      <div class="contact-full-page-link fade-in">
-        <a href="pages/contact.html" class="btn-outline-dark">View Full Contact Page →</a>
+      <div class="home-cta-actions fade-in">
+        <a href="pages/contact.html" class="btn-primary">Send Us a Message →</a>
+        <a href="tel:+919876543210" class="btn-outline">Call Us</a>
       </div>
+    </div>
+    <div class="home-cta-info fade-in">
+      <div class="cta-info-item"><span class="cta-info-icon" aria-hidden="true">✉️</span><span>hello@thecomedyfactory.in</span></div>
+      <div class="cta-info-item"><span class="cta-info-icon" aria-hidden="true">📍</span><span>Ahmedabad &amp; Vadodara, Gujarat</span></div>
+      <div class="cta-info-item"><span class="cta-info-icon" aria-hidden="true">📞</span><span>+91 98765 43210</span></div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════
-       FOOTER
-  ════════════════════════════════ -->
-  <footer id="site-footer" aria-label="Site Footer">
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="site-footer">
     <div class="footer-grid">
-
       <div class="footer-brand">
-        <img src="assets/tcflogo.png" class="footer-logo" alt="The Comedy Factory" />
-        <p class="footer-tagline">
-          Gujarat's first and finest comedy entertainment company.
-          Standup, Improv, Musical, Sketch — we make India laugh, one show at a time.
-        </p>
+        <img src="assets/logo.png" class="footer-logo" onerror="this.style.display='none'" alt="The Comedy Factory" />
+        <p class="footer-tagline">Gujarat's first comedy entertainment company. Standup, Improv, Musical, Sketch — one show at a time.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/thecomedyfactoryindia/" target="_blank" class="social-btn dark" aria-label="Instagram">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/@TheComedyFactory" target="_blank" class="social-btn dark" aria-label="YouTube">
-            <svg width="17" height="17" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.052-.072 1.972l-.008.104-.022.261-.01.104c-.048.519-.119 1.023-.22 1.402a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/thecomedyfactory/" target="_blank" class="social-btn dark" aria-label="Facebook">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-          </a>
-          <a href="https://x.com/ComedyFactoryIn" target="_blank" class="social-btn dark" aria-label="X (Twitter)">
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
-          </a>
+          <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
+          <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
+          <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
+          <a href="#" class="social-btn dark" aria-label="Twitter">X</a>
         </div>
       </div>
-
       <div>
         <div class="footer-col-title">Navigate</div>
         <ul class="footer-nav-links">
@@ -678,11 +606,10 @@
           <li><a href="pages/about.html">About Us</a></li>
           <li><a href="pages/shows.html">Shows</a></li>
           <li><a href="pages/team.html">Our Team</a></li>
-          <li><a href="pages/media.html">Gallery</a></li>
-          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <li><a href="index.html#international">World Tour</a></li>
         </ul>
       </div>
-
       <div>
         <div class="footer-col-title">Show Types</div>
         <ul class="footer-nav-links">
@@ -694,24 +621,17 @@
           <li><a href="pages/shows.html">Private Bookings</a></li>
         </ul>
       </div>
-
       <div>
         <div class="footer-col-title">Stay in the Loop</div>
-        <p class="newsletter-desc">
-          Get show alerts, ticket discounts, and exclusive behind-the-scenes content straight to your inbox.
-        </p>
+        <p class="newsletter-desc">Show alerts, ticket discounts, and behind-the-scenes content straight to your inbox.</p>
         <form class="newsletter-form" novalidate aria-label="Newsletter Signup">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email for newsletter" required />
+          <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Your email" required />
           <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
         </form>
       </div>
-
     </div>
-
     <div class="footer-bottom">
-      <p class="footer-copy">
-        &copy; 2026 <span>The Comedy Factory</span>. All rights reserved. Made with <span>♥</span> in Gujarat, India.
-      </p>
+      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved. Made with <span>♥</span> in Gujarat, India.</p>
       <div class="footer-legal">
         <a href="pages/privacy.html" class="footer-copy">Privacy Policy</a>
         <a href="pages/terms.html"   class="footer-copy">Terms of Use</a>
@@ -720,8 +640,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
-
+  <script src="js/home.js"></script>
 </body>
 </html>
