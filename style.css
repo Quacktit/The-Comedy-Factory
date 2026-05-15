@@ -498,6 +498,89 @@ nav#navbar.scrolled .hamburger span {
   color: var(--yellow);
 }
 
+/* =======================================================
+   MOBILE MENU OVERLAY FIX (ANDROID & IOS)
+======================================================= */
+
+/* Force the mobile menu to behave properly */
+.mobile-menu {
+  display: flex !important; /* Forces flex layout */
+  position: fixed;
+  top: 72px; /* Sits right under the navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black) !important;
+  z-index: 1000; /* Keeps it above everything except navbar/hamburger */
+  flex-direction: column;
+  padding: 40px 5%;
+  overflow-y: auto;
+  
+  /* Start hidden with CSS transforms for smooth Android rendering */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  pointer-events: none; /* Prevents accidental clicks when invisible */
+}
+
+/* 
+   When JS toggles the "open" class, make the menu visible 
+*/
+.mobile-menu.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important; /* Re-enable clicks */
+}
+
+/* If scrolled, ensure the menu drops from the shorter navbar height */
+nav#navbar.scrolled ~ .mobile-menu {
+  top: 60px !important;
+}
+
+/* Fix mobile menu links so they are easily clickable on Android */
+.mobile-menu .nav-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu .nav-links a {
+  color: var(--white) !important;
+  font-family: var(--font-body);
+  font-size: 18px !important;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 18px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  width: 100%;
+  text-align: left;
+  display: block; /* Gives a full-width tap area */
+  -webkit-tap-highlight-color: transparent; /* Removes Android tap highlight */
+}
+
+.mobile-menu .nav-links a.active,
+.mobile-menu .nav-links a:active {
+  color: var(--yellow) !important;
+}
+
+/* The Call to Action Book Tickets Button inside mobile menu */
+.mobile-menu .nav-cta {
+  background: var(--yellow) !important;
+  color: var(--black) !important;
+  margin-top: 30px !important;
+  width: 100%;
+  text-align: center;
+  padding: 16px !important;
+  font-size: 14px !important;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
 
 /* ============================================ 
                HERO SECTION 
