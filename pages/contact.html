@@ -1,360 +1,170 @@
-<!-- ═══════════════════════════════════════════════════════════════
-                    The Comedy Factory — Contact Us
- ═══════════════════════════════════════════════════════════════ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact The Comedy Factory — Book a corporate show, enquire about private events, or just say hello." />
+  <meta name="description" content="Contact The Comedy Factory for corporate bookings, open mics, or general enquiries." />
   <title>Contact Us | The Comedy Factory</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" type="image/png" href="../assets/tcflogo.png" />
+  <link rel="icon" type="image/png" href="../assets/tcflogo.png" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
-  <!-- Floating CTA -->
+  <!-- FLOATING BOOK TICKET BUTTON -->
   <a href="shows.html" class="floating-btn" aria-label="Book a Show">🎟️ Book a Show</a>
 
-  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <!-- NAVBAR -->
   <nav id="navbar" role="navigation" aria-label="Main Navigation">
-    <a href="index.html" class="nav-logo" aria-label="The Comedy Factory — Home">
-            <img src="../assets/tcflogo.png"
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/logo.png"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+           alt="The Comedy Factory Logo" />
+      <span class="nav-logo-text-fallback" style="display:none; font-family:'Abril Fatface',serif; font-size:22px; color:#D4B200;">TCF</span>
     </a>
-   <div class="nav-links">
+    <div class="nav-links">
       <a href="../index.html">Home</a>
-      <a href="../pages/about.html">About</a>
-      <a href="shows.html" >Shows</a>
+      <a href="about.html">About</a>
+      <a href="shows.html">Shows</a>
       <a href="team.html">Team</a>
-      <a href="../pages/media.html">Press</a>
-      <a href="../pages/contact.html" class="active">Contact</a>
+      <a href="media.html">Press</a>
+      <a href="contact.html" class="active">Contact</a>
       <a href="shows.html" class="nav-cta">Book Tickets</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile menu -->
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
-     <div class="nav-links">
+    <div class="nav-links">
       <a href="../index.html">Home</a>
-      <a href="../pages/about.html">About</a>
-      <a href="shows.html" >Shows</a>
+      <a href="about.html">About</a>
+      <a href="shows.html">Shows</a>
       <a href="team.html">Team</a>
-      <a href="../pages/media.html">Press</a>
-      <a href="../pages/contact.html" class="active">Contact</a>
-      <a href="shows.html" class="nav-cta">Book Tickets</a>
+      <a href="media.html">Press</a>
+      <a href="contact.html" class="active">Contact</a>
     </div>
     <a href="shows.html" class="nav-cta">🎟️ Book Tickets</a>
   </div>
 
-  <!-- ═══════════════════ HERO ═══════════════════ -->
-  <section id="home" style="min-height:50vh; padding-top:72px; padding-bottom:0;">
+  <!-- PAGE HERO -->
+  <section id="home" style="min-height:45vh; padding-top:72px; padding-bottom:0;">
     <div class="hero-bg-pattern" aria-hidden="true"></div>
     <div class="hero-spotlight"  aria-hidden="true"></div>
     <div class="hero-noise"      aria-hidden="true"></div>
     <div class="hero-stage-line" aria-hidden="true"></div>
-    <div class="hero-content" style="padding-bottom:80px;">
-      <p class="hero-eyebrow">We'd Love to Hear from You</p>
-      <h1 class="hero-title" style="font-size:clamp(52px,8vw,100px);">Get in<br /><span>Touch</span></h1>
-      <p class="hero-subtitle">Corporate shows, private bookings, open mic enquiries — let's talk.</p>
+    
+    <div class="hero-content" style="padding-bottom: 60px;">
+      <p class="hero-eyebrow fade-in">Reach Out</p>
+      <h1 class="hero-title fade-in">Contact <span>Us</span></h1>
+      <p class="hero-subtitle fade-in">
+        Get in touch for corporate shows, open mics, collabs, or just to say hi.
+      </p>
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-inner">
-      <span class="ticker-item">Corporate Shows</span>
-      <span class="ticker-item">Private Events</span>
-      <span class="ticker-item">Wedding &amp; Sangeet</span>
-      <span class="ticker-item">College Fests</span>
-      <span class="ticker-item">Open Mic Bookings</span>
-      <span class="ticker-item">International Tours</span>
-      <span class="ticker-item">Corporate Shows</span>
-      <span class="ticker-item">Private Events</span>
-      <span class="ticker-item">Wedding &amp; Sangeet</span>
-      <span class="ticker-item">College Fests</span>
-      <span class="ticker-item">Open Mic Bookings</span>
-      <span class="ticker-item">International Tours</span>
-    </div>
-  </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" aria-label="Contact Section">
+    <div class="contact-inner">
+      <p class="section-label light fade-in">Let's Talk</p>
+      <h2 class="section-title light fade-in">We'd love to hear from <span>you</span></h2>
 
-  <!-- ═══════════════════ MAIN CONTACT SECTION ═══════════════════ -->
-  <section id="contact-main">
-    <div style="max-width:var(--max-w); margin:0 auto;">
-      <p class="section-label light fade-in">Book a Show or Say Hello</p>
-      <h2 class="section-title light fade-in">Send Us an <span>Enquiry</span></h2>
-      <p class="section-desc light fade-in">We respond to all enquiries within 24 hours. We promise we're funnier in person.</p>
-    </div>
-
-    <div class="contact-grid">
-
-      <!-- ─── INFO COLUMN ─── -->
-      <div class="contact-info-col fade-in">
-
-        <div class="contact-item">
-          <div class="contact-icon-box">📍</div>
-          <div>
-            <div class="contact-info-label">Based In</div>
-            <div class="contact-info-value">Ahmedabad, Gujarat, India<br />Performing Pan-India &amp; Internationally</div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon-box">📧</div>
-          <div>
-            <div class="contact-info-label">Email Us</div>
-            <div class="contact-info-value">
-              <a href="mailto:thecomedyfactory2011@gmail.com">thecomedyfactory2011@gmail.com</a>
+      <div class="contact-grid">
+        
+        <!-- Info Column -->
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <div class="contact-icon-box">✉️</div>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <div class="contact-info-value">hello@thecomedyfactory.in<br>bookings@thecomedyfactory.in</div>
             </div>
           </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon-box">🎟️</div>
-          <div>
-            <div class="contact-info-label">Book Tickets</div>
-            <div class="contact-info-value">
-              Available on <a href="#">BookMyShow</a><br />
-              &amp; official ticketing partners
+          <div class="contact-item">
+            <div class="contact-icon-box">📞</div>
+            <div>
+              <div class="contact-info-label">Call Us</div>
+              <div class="contact-info-value">+91 98989 89898<br>Mon-Sat, 10am to 7pm</div>
             </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">📍</div>
+            <div>
+              <div class="contact-info-label">Visit Us</div>
+              <div class="contact-info-value">The Comedy Factory Studio<br>Ahmedabad, Gujarat, India</div>
+            </div>
+          </div>
+
+          <div class="contact-socials-title">Follow Us</div>
+          <div class="contact-socials">
+            <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
+            <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
+            <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
+            <a href="#" class="social-btn dark" aria-label="Twitter">X</a>
           </div>
         </div>
 
-        <div class="contact-item">
-          <div class="contact-icon-box">📱</div>
-          <div>
-            <div class="contact-info-label">Follow Us</div>
-            <div class="contact-info-value">
-              <a href="#">@thecomedyfactoryindia</a><br />
-              Instagram · YouTube · Facebook
-            </div>
-          </div>
-        </div>
+        <!-- Form Column -->
+        <div class="contact-form fade-in">
+          <form id="contactFormEl" novalidate aria-label="Contact Form">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">For corporate shows, college fests, or private events.</p>
 
-        <div class="contact-divider"></div>
-
-        <div class="contact-socials-label">Find us on social media</div>
-        <div class="contact-socials">
-          <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
-          <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
-          <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
-          <a href="#" class="social-btn dark" aria-label="Twitter/X">X</a>
-        </div>
-
-        <!-- Quick links -->
-        <div class="quick-links-row" style="margin-top:40px;">
-          <a href="shows.html" class="quick-link-card">
-            <span class="quick-link-icon">🎤</span>
-            <span class="quick-link-text">Upcoming Shows</span>
-          </a>
-          <a href="about.html" class="quick-link-card">
-            <span class="quick-link-icon">📖</span>
-            <span class="quick-link-text">About TCF</span>
-          </a>
-          <a href="team.html" class="quick-link-card">
-            <span class="quick-link-icon">🎭</span>
-            <span class="quick-link-text">Meet the Team</span>
-          </a>
-          <a href="media.html" class="quick-link-card">
-            <span class="quick-link-icon">📸</span>
-            <span class="quick-link-text">Gallery</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- ─── FORM COLUMN ─── -->
-      <div class="contact-form-col fade-in">
-        <div class="form-head-title">Send us a Message</div>
-        <div class="form-head-sub">We'll get back to you within 24 hours. Promise.</div>
-
-        <form id="contactFormEl" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cName">Your Name *</label>
-              <input type="text" id="cName" name="name" placeholder="Riya Shah" autocomplete="name" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" placeholder="Your Phone" required />
+              </div>
             </div>
             <div class="form-group">
-              <label for="cEmail">Email Address *</label>
-              <input type="email" id="cEmail" name="email" placeholder="you@example.com" autocomplete="email" />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cPhone">Phone Number *</label>
-              <input type="tel" id="cPhone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" placeholder="your@email.com" required />
             </div>
             <div class="form-group">
-              <label for="cType">Enquiry Type</label>
-              <select id="cType" name="type">
-                <option value="">Select type…</option>
-                <option value="corporate">Corporate Show</option>
-                <option value="private">Private Party</option>
-                <option value="openmic">Open Mic</option>
-                <option value="wedding">Wedding / Sangeet</option>
-                <option value="college">College Fest</option>
-                <option value="tickets">Ticket Query</option>
-                <option value="press">Press / Media</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="contactMessage">Your Message</label>
+              <textarea id="contactMessage" placeholder="Tell us about your event or enquiry..." required></textarea>
             </div>
-          </div>
+            
+            <button type="submit" id="contactSubmitBtn" class="btn-submit">Send Enquiry →</button>
+          </form>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cCity">Your City</label>
-              <input type="text" id="cCity" name="city" placeholder="Ahmedabad" />
-            </div>
-            <div class="form-group">
-              <label for="cDate">Preferred Event Date</label>
-              <input type="text" id="cDate" name="date" placeholder="e.g. 20 June 2026" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="cMessage">Message *</label>
-            <textarea id="cMessage" name="message"
-              placeholder="Tell us about your event, expected audience size, venue preferences, and any special requirements…"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit" id="contactSubmitBtn">
-            Send Enquiry →
-          </button>
-        </form>
-
-        <!-- Success state -->
-        <div class="form-success" id="contactSuccess">
-          <div class="success-icon">🎉</div>
-          <p>
-            <strong>Your enquiry has been sent!</strong><br />
-            We'll get back to you within 24 hours. In the meantime, check out our
-            <a href="shows.html" style="color:var(--yellow);">upcoming shows</a>.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════ CORPORATE CTA ═══════════════════ -->
-  <section id="corporate-cta">
-    <div class="corporate-grid">
-      <div>
-        <p class="section-label fade-in">For Businesses</p>
-        <h2 class="section-title fade-in">Corporate &amp; <span>Private Bookings</span></h2>
-        <p class="section-desc fade-in" style="margin-top:16px;">
-          We perform for corporate events, sangeets, bachelor parties, college fests,
-          and private gatherings. Every occasion except a funeral — and we're open to
-          negotiating that too.
-        </p>
-        <div class="corporate-features">
-          <div class="corporate-feature fade-in">
-            <div class="corporate-feature-icon">✏️</div>
-            <div class="corporate-feature-text"><strong>Custom-tailored content</strong> — we write jokes about your company, your team, and your culture.</div>
-          </div>
-          <div class="corporate-feature fade-in">
-            <div class="corporate-feature-icon">✅</div>
-            <div class="corporate-feature-text"><strong>Clean &amp; inclusive comedy</strong> — appropriate for all ages and professional environments.</div>
-          </div>
-          <div class="corporate-feature fade-in">
-            <div class="corporate-feature-icon">🌐</div>
-            <div class="corporate-feature-text"><strong>Hindi, English &amp; Gujarati</strong> — we perform in whichever language your audience prefers.</div>
-          </div>
-          <div class="corporate-feature fade-in">
-            <div class="corporate-feature-icon">📦</div>
-            <div class="corporate-feature-text"><strong>Full production support</strong> — sound, lights, and stage management included on request.</div>
+          <div id="contactSuccess" class="form-success">
+            <div class="success-icon">🎉</div>
+            <h3 class="form-title" style="color:var(--yellow);">Message Sent!</h3>
+            <p>Thanks for reaching out! Our team will get back to you within 24-48 hours. Keep laughing!</p>
           </div>
         </div>
-        <a href="#contact-main" class="btn-primary fade-in" style="margin-top:32px; display:inline-block;">Send Corporate Enquiry →</a>
-      </div>
-      <div class="fade-in">
-        <div class="corporate-stat-row">
-          <div class="corporate-stat">
-            <div class="corporate-stat-num">200+</div>
-            <div class="corporate-stat-label">Corporate Shows</div>
-          </div>
-          <div class="corporate-stat">
-            <div class="corporate-stat-num">50+</div>
-            <div class="corporate-stat-label">Fortune 500 Clients</div>
-          </div>
-          <div class="corporate-stat">
-            <div class="corporate-stat-num">8</div>
-            <div class="corporate-stat-label">Countries Performed</div>
-          </div>
-          <div class="corporate-stat">
-            <div class="corporate-stat-num">15</div>
-            <div class="corporate-stat-label">Years Experience</div>
-          </div>
-        </div>
-        <div style="background:var(--black); padding:28px; margin-top:16px; border:1px solid rgba(212,178,0,0.2);">
-          <div style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); margin-bottom:14px; font-weight:700;">What Past Clients Say</div>
-          <p style="font-size:14px; color:rgba(255,255,255,0.55); font-style:italic; line-height:1.8;">"TCF made our annual day the best one in 10 years. The whole crowd — 400 employees — was in tears laughing. Absolutely brilliant."</p>
-          <div style="margin-top:12px; font-size:12px; color:rgba(255,255,255,0.3);">— HR Director, Fortune 500 Company, Ahmedabad</div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════ FAQ ═══════════════════ -->
-  <section id="faq">
-    <div style="max-width:var(--max-w); margin:0 auto;">
-      <p class="section-label center fade-in">Quick Answers</p>
-      <h2 class="section-title center fade-in">Frequently Asked <span>Questions</span></h2>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item fade-in">
-        <div class="faq-question">How far in advance should I book?</div>
-        <div class="faq-answer">For corporate and private events, we recommend booking at least 3–4 weeks in advance to allow time for custom material. For public shows, tickets are available until sold out.</div>
-      </div>
-      <div class="faq-item fade-in">
-        <div class="faq-question">Do you perform outside Gujarat?</div>
-        <div class="faq-answer">Absolutely! We've performed across India and in 8 countries internationally. Travel and accommodation for outstation shows can be arranged.</div>
-      </div>
-      <div class="faq-item fade-in">
-        <div class="faq-question">Can the content be customised for our company?</div>
-        <div class="faq-answer">Yes — and we love doing it. We write custom material based on your company, industry, team culture, and inside jokes. It always gets the biggest laughs.</div>
-      </div>
-      <div class="faq-item fade-in">
-        <div class="faq-question">What languages do you perform in?</div>
-        <div class="faq-answer">We perform in Gujarati, Hindi, and English — or any combination. Just let us know your audience's preference when you enquire.</div>
-      </div>
-      <div class="faq-item fade-in">
-        <div class="faq-question">What is the minimum show duration?</div>
-        <div class="faq-answer">Our shortest corporate sets are 20 minutes. Full-length shows run between 60–90 minutes. We can tailor the duration to your event's schedule.</div>
-      </div>
-      <div class="faq-item fade-in">
-        <div class="faq-question">How do ticket refunds work?</div>
-        <div class="faq-answer">Tickets are non-refundable unless a show is cancelled by TCF. In that case, a full refund is processed within 5–7 business days via the original payment method.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <!-- FOOTER -->
   <footer id="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="TCF-logo-with.png" class="footer-logo" alt="The Comedy Factory" style="height:52px; width:auto;" />
+        <img src="../assets/logo.png" class="footer-logo" onerror="this.style.display='none'" alt="The Comedy Factory" />
         <p class="footer-tagline">Gujarat's first comedy entertainment company. Being funny is a serious business.</p>
         <div class="footer-socials">
           <a href="#" class="social-btn dark" aria-label="Instagram">Ig</a>
           <a href="#" class="social-btn dark" aria-label="YouTube">Yt</a>
           <a href="#" class="social-btn dark" aria-label="Facebook">Fb</a>
-          <a href="#" class="social-btn dark" aria-label="Twitter/X">X</a>
+          <a href="#" class="social-btn dark" aria-label="Twitter">X</a>
         </div>
       </div>
       <div>
         <div class="footer-col-title">Navigate</div>
         <ul class="footer-nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="shows.html">Shows</a></li>
           <li><a href="team.html">Our Team</a></li>
-          <li><a href="media.html">Gallery</a></li>
+          <li><a href="media.html">Press</a></li>
         </ul>
       </div>
       <div>
@@ -369,7 +179,7 @@
       </div>
       <div>
         <div class="footer-col-title">Stay in the Loop</div>
-        <p class="newsletter-desc">Get show alerts and early-bird ticket discounts in your inbox.</p>
+        <p class="newsletter-desc">Get show alerts and ticket discounts in your inbox.</p>
         <form class="newsletter-form" novalidate aria-label="Newsletter Signup">
           <input type="email" class="newsletter-input" placeholder="your@email.com" required />
           <button type="submit" class="newsletter-submit" aria-label="Subscribe">→</button>
@@ -377,68 +187,15 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved. Made with 😄 in Gujarat.</p>
+      <p class="footer-copy">&copy; 2026 <span>The Comedy Factory</span>. All rights reserved.</p>
       <div class="footer-legal">
         <a href="privacy.html" class="footer-copy">Privacy Policy</a>
-        <a href="terms.html"   class="footer-copy">Terms of Use</a>
+        <a href="terms.html" class="footer-copy">Terms of Use</a>
         <a href="contact.html" class="footer-copy">Contact</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script>
-    /* ── Contact form validation & submit ── */
-    (function () {
-      'use strict';
-
-      function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
-
-      function setErr(id, msg) {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.style.borderColor = '#e53935';
-        const old = el.parentElement.querySelector('.field-error');
-        if (old) old.remove();
-        const e = document.createElement('span');
-        e.className = 'field-error';
-        e.textContent = msg;
-        el.parentElement.appendChild(e);
-      }
-
-      function clrErr(id) {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.style.borderColor = '';
-        const old = el.parentElement.querySelector('.field-error');
-        if (old) old.remove();
-      }
-
-      function validate() {
-        let ok = true;
-        ['cName','cEmail','cPhone','cMessage'].forEach(id => clrErr(id));
-        if (!document.getElementById('cName')?.value.trim()) { setErr('cName','Please enter your name.'); ok = false; }
-        if (!isEmail(document.getElementById('cEmail')?.value || '')) { setErr('cEmail','Please enter a valid email.'); ok = false; }
-        if ((document.getElementById('cPhone')?.value.trim() || '').length < 6) { setErr('cPhone','Please enter a valid phone number.'); ok = false; }
-        if ((document.getElementById('cMessage')?.value.trim() || '').length < 10) { setErr('cMessage','Please tell us a bit more (10+ characters).'); ok = false; }
-        return ok;
-      }
-
-      document.getElementById('contactFormEl')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (!validate()) return;
-        const btn = document.getElementById('contactSubmitBtn');
-        btn.textContent = 'Sending…'; btn.disabled = true;
-        setTimeout(() => {
-          this.style.display = 'none';
-          document.getElementById('contactSuccess').classList.add('show');
-        }, 1400);
-      });
-
-      ['cName','cEmail','cPhone','cMessage'].forEach(id => {
-        document.getElementById(id)?.addEventListener('input', () => clrErr(id));
-      });
-    })();
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>
