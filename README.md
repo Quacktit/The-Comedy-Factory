@@ -35,4 +35,4 @@ I am highly motivated to collaborate with the team and am actively open to discu
 ##  Contact & Feedback
 If you have any feedback or would like to connect:
 GitHub: [@quacktit](https://github.com/quacktit)
-Email: [@VivakshVankar](vankarvivaksh@gmail.com}
+Email: (vankarvivaksh@gmail.com}
