@@ -422,6 +422,81 @@ nav#navbar.scrolled ~ .mobile-menu {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
 }
+/* =======================================================
+   HAMBURGER MENU - ANDROID & MOBILE THEME FIX
+======================================================= */
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  
+  /* Increase padding for easier tapping on Android screens */
+  padding: 12px; 
+  background: transparent;
+  border: none;
+  z-index: 1001; /* Keep it above the mobile menu */
+  
+  /* Remove default tap highlights on Android */
+  -webkit-tap-highlight-color: transparent; 
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  
+  /* Apply the primary theme color (Black or Yellow depending on your navbar) */
+  /* If your navbar is white, this should be Black. If navbar is dark, make it var(--yellow) */
+  background-color: var(--black); 
+  
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+/* Scrolled state: If navbar turns dark on scroll, make hamburger yellow */
+nav#navbar.scrolled .hamburger span {
+  background-color: var(--yellow);
+}
+
+/* 
+   Animation states when clicked / open
+*/
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background-color: var(--yellow-gold); /* Fun pop of color when open */
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0); /* Smoothly shrinks out */
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -7px);
+  background-color: var(--yellow-gold);
+}
+
+/* Ensure the Mobile Menu sits perfectly below the fixed Navbar */
+.mobile-menu {
+  top: 72px; /* Adjust if your mobile navbar height is different */
+  background-color: var(--black); /* Follow the dark theme */
+  border-top: 2px solid var(--yellow);
+}
+
+/* Make Mobile Menu text visible against the dark background */
+.mobile-menu .nav-links a {
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu .nav-links a:hover,
+.mobile-menu .nav-links a.active {
+  color: var(--yellow);
+}
 
 
 /* ============================================ 
