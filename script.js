@@ -795,5 +795,91 @@ window.TCF.showsData = [
   });
 })();
 
+/* ==========================================================================
+                        CUSTOM DROPDOWN UI LOGIC
+   ========================================================================== */
 
+(function () {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all our custom dropdowns
+    const selects = document.querySelectorAll('.shows-dropdown, .newsletter-city');
+    
+    selects.forEach(select => {
+      // 1. Create a wrapper
+      const wrapper = document.createElement('div');
+      wrapper.className = 'custom-select-wrapper';
+      
+      // 2. Wrap the original select
+      select.parentNode.insertBefore(wrapper, select);
+      wrapper.appendChild(select);
+      
+      // 3. Create the visible button (trigger)
+      const trigger = document.createElement('div');
+      trigger.className = 'custom-select-trigger';
+      // Set initial text to the currently selected option
+      trigger.textContent = select.options[select.selectedIndex].text;
+      wrapper.appendChild(trigger);
+      
+      // 4. Create the pop-up list
+      const optionsList = document.createElement('ul');
+      optionsList.className = 'custom-select-options';
+      wrapper.appendChild(optionsList);
+      
+      // 5. Populate the pop-up list with our options
+      Array.from(select.options).forEach(option => {
+        // Skip disabled placeholder options (like "City") from the pop-up menu
+        if (option.disabled) return; 
+        
+        const li = document.createElement('li');
+        li.className = 'custom-option';
+        li.textContent = option.text;
+        li.dataset.value = option.value;
+        
+        if (option.selected) li.classList.add('selected');
+        
+        // When an option is clicked...
+        li.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          // Update the original hidden select
+          select.value = this.dataset.value;
+          // Update the visible button text
+          trigger.textContent = this.textContent;
+          
+          // Trigger the "change" event so our filtering script knows it updated
+          select.dispatchEvent(new Event('change'));
+          
+          // Update the highlighted class
+          wrapper.querySelectorAll('.custom-option').forEach(el => el.classList.remove('selected'));
+          this.classList.add('selected');
+          
+          // Close the dropdown
+          wrapper.classList.remove('open');
+        });
+        
+        optionsList.appendChild(li);
+      });
+      
+      // 6. Open/Close the dropdown when clicking the button
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Close any other open dropdowns first
+        document.querySelectorAll('.custom-select-wrapper').forEach(w => {
+          if (w !== wrapper) w.classList.remove('open');
+        });
+        // Toggle this one
+        wrapper.classList.toggle('open');
+      });
+    });
+    
+    // 7. Close the dropdown if the user clicks anywhere else on the page
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.custom-select-wrapper').forEach(w => {
+        w.classList.remove('open');
+      });
+    });
+  });
+})();
 
