@@ -2128,7 +2128,7 @@ footer#site-footer {
 }
 
 /* =======================================================
-   CUSTOM FULL THEME DROPDOWNS (JS Powered) - FIXED
+   CUSTOM FULL THEME DROPDOWNS (JS Powered) - FINAL FIXED
 ======================================================= */
 
 /* 1. Hide the ugly native select element */
@@ -2136,11 +2136,12 @@ footer#site-footer {
   display: none !important; 
 }
 
-/* 2. The Wrapper */
+/* 2. The Wrapper (FIXED: Stops stretching across row) */
 .custom-select-wrapper {
   position: relative !important;
   user-select: none;
-  min-width: 160px;
+  min-width: 180px; 
+  width: max-content; 
 }
 
 /* For the newsletter flexbox */
@@ -2148,6 +2149,8 @@ footer#site-footer {
   display: flex;
   flex-direction: column;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+  width: auto;
+  flex: 1; /* Lets it share space perfectly with the email input */
 }
 
 /* 3. The Visible Button (Trigger) */
@@ -2203,7 +2206,7 @@ footer#site-footer {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* 4. The Pop-Up List! (FIXED SCROLL & OVERLAY) */
+/* 4. The Pop-Up List! (FIXED: Scroll & Overlay Limits) */
 .custom-select-options {
   position: absolute;
   top: calc(100% + 4px); /* Sit right below the button with a 4px gap */
@@ -2222,7 +2225,7 @@ footer#site-footer {
   margin: 0;
   box-shadow: 0 10px 40px rgba(0,0,0,0.8);
   
-  /* The FIX: Force a max height and add a scrollbar */
+  /* Force a max height and add a scrollbar */
   max-height: 220px;
   overflow-y: auto; 
 }
@@ -2280,4 +2283,17 @@ footer#site-footer {
 }
 .custom-select-options::-webkit-scrollbar-thumb:hover {
   background: var(--yellow);
+}
+
+/* 7. SHOWS FILTER BAR SPECIFIC FIXES (Stops overlap) */
+.shows-filter-bar {
+  display: inline-flex; /* Stops it from stretching */
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-family: var(--font-body);
+  position: relative; /* Creates a layer */
+  z-index: 999; /* Forces the entire filter above show cards */
 }
