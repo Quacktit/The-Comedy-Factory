@@ -794,3 +794,71 @@ window.TCF.showsData = [
     });
   });
 })();
+
+
+
+
+/* ============================================================
+   THE COMEDY FACTORY — home.js
+   Homepage-specific JavaScript
+   All site-wide JS (navbar, shows, gallery, contact,
+   animations, newsletter) lives in script.js
+   ============================================================ */
+
+(function () {
+  'use strict';
+
+  /* ── Rotating hero word ── */
+  var words   = ['LAUGH', 'ROFL', 'HOWL', 'SNORT', 'CACKLE', 'GASP', 'WHEEZE'];
+  var current = 0;
+  var el      = document.getElementById('heroRotatingWord');
+
+  function rotateWord() {
+    if (!el) return;
+    el.style.opacity = '0';
+    setTimeout(function () {
+      current = (current + 1) % words.length;
+      el.textContent = words[current];
+      el.style.opacity = '1';
+    }, 350);
+  }
+
+  if (el) {
+    el.style.transition = 'opacity 0.35s ease';
+    setInterval(rotateWord, 2800);
+  }
+
+  /* ── Horizontal scroll drag on team strip ── */
+  var track = document.querySelector('.team-scroll-track');
+  if (track) {
+    var isDown   = false;
+    var startX   = 0;
+    var scrollLeft = 0;
+
+    track.addEventListener('mousedown', function (e) {
+      isDown = true;
+      track.style.cursor = 'grabbing';
+      startX   = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', function () {
+      isDown = false;
+      track.style.cursor = '';
+    });
+
+    track.addEventListener('mouseup', function () {
+      isDown = false;
+      track.style.cursor = '';
+    });
+
+    track.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x    = e.pageX - track.offsetLeft;
+      var walk = (x - startX) * 1.4;
+      track.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+})();
